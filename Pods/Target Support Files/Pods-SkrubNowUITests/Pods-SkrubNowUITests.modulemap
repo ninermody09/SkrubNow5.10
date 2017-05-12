@@ -1,0 +1,6 @@
+framework module Pods_SkrubNowUITests {
+  umbrella header "Pods-SkrubNowUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

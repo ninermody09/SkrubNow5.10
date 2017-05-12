@@ -1,0 +1,6 @@
+framework module Pods_SkrubNow {
+  umbrella header "Pods-SkrubNow-umbrella.h"
+
+  export *
+  module * { export * }
+}

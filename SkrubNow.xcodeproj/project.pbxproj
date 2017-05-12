@@ -1,0 +1,785 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3A1213791E62709D00FED42F /* CarInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A12136C1E62709D00FED42F /* CarInformationViewController.swift */; };
+		3A12137A1E62709D00FED42F /* CarInformationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A12136D1E62709D00FED42F /* CarInformationViewController.xib */; };
+		3A12137B1E62709D00FED42F /* CreditCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A12136E1E62709D00FED42F /* CreditCardViewController.swift */; };
+		3A12137C1E62709D00FED42F /* CreditCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A12136F1E62709D00FED42F /* CreditCardViewController.xib */; };
+		3A12137D1E62709D00FED42F /* FirebaseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1213701E62709D00FED42F /* FirebaseData.swift */; };
+		3A12137E1E62709D00FED42F /* RequestedWashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1213711E62709D00FED42F /* RequestedWashViewController.swift */; };
+		3A12137F1E62709D00FED42F /* RequestedWashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A1213721E62709D00FED42F /* RequestedWashViewController.xib */; };
+		3A1213801E62709D00FED42F /* ScheduleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1213731E62709D00FED42F /* ScheduleData.swift */; };
+		3A1213811E62709D00FED42F /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1213741E62709D00FED42F /* ScheduleViewController.swift */; };
+		3A1213821E62709D00FED42F /* ScheduleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A1213751E62709D00FED42F /* ScheduleViewController.xib */; };
+		3A1213831E62709D00FED42F /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1213761E62709D00FED42F /* UserInfo.swift */; };
+		3A1213841E62709D00FED42F /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A1213771E62709D00FED42F /* ViewController.xib */; };
+		3A1213861E6275F600FED42F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3A1213851E6275F600FED42F /* GoogleService-Info.plist */; };
+		3AB0DCE91E626CFF009E21D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB0DCE81E626CFF009E21D1 /* AppDelegate.swift */; };
+		3AB0DCEB1E626CFF009E21D1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB0DCEA1E626CFF009E21D1 /* ViewController.swift */; };
+		3AB0DCEE1E626CFF009E21D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AB0DCEC1E626CFF009E21D1 /* Main.storyboard */; };
+		3AB0DCF01E626D00009E21D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AB0DCEF1E626D00009E21D1 /* Assets.xcassets */; };
+		3AB0DCF31E626D00009E21D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AB0DCF11E626D00009E21D1 /* LaunchScreen.storyboard */; };
+		3AB0DCFE1E626D00009E21D1 /* SkrubNowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB0DCFD1E626D00009E21D1 /* SkrubNowTests.swift */; };
+		3AB0DD091E626D00009E21D1 /* SkrubNowUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB0DD081E626D00009E21D1 /* SkrubNowUITests.swift */; };
+		645350CA4CD1E2E06B3BDCF8 /* Pods_SkrubNowUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3BE138C350C618B5B5E9B66 /* Pods_SkrubNowUITests.framework */; };
+		6BE61402CD349E2F5440BABE /* Pods_SkrubNow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B3B1C10D976FDA35E325C42 /* Pods_SkrubNow.framework */; };
+		F0CB788FD50D029BDA22C238 /* Pods_SkrubNowTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 416D2221AE00596DFE0A5BF0 /* Pods_SkrubNowTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3AB0DCFA1E626D00009E21D1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3AB0DCDD1E626CFF009E21D1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3AB0DCE41E626CFF009E21D1;
+			remoteInfo = SkrubNow;
+		};
+		3AB0DD051E626D00009E21D1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3AB0DCDD1E626CFF009E21D1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3AB0DCE41E626CFF009E21D1;
+			remoteInfo = SkrubNow;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3A12136C1E62709D00FED42F /* CarInformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarInformationViewController.swift; sourceTree = "<group>"; };
+		3A12136D1E62709D00FED42F /* CarInformationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CarInformationViewController.xib; sourceTree = "<group>"; };
+		3A12136E1E62709D00FED42F /* CreditCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardViewController.swift; sourceTree = "<group>"; };
+		3A12136F1E62709D00FED42F /* CreditCardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreditCardViewController.xib; sourceTree = "<group>"; };
+		3A1213701E62709D00FED42F /* FirebaseData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseData.swift; sourceTree = "<group>"; };
+		3A1213711E62709D00FED42F /* RequestedWashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestedWashViewController.swift; sourceTree = "<group>"; };
+		3A1213721E62709D00FED42F /* RequestedWashViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RequestedWashViewController.xib; sourceTree = "<group>"; };
+		3A1213731E62709D00FED42F /* ScheduleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleData.swift; sourceTree = "<group>"; };
+		3A1213741E62709D00FED42F /* ScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
+		3A1213751E62709D00FED42F /* ScheduleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScheduleViewController.xib; sourceTree = "<group>"; };
+		3A1213761E62709D00FED42F /* UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		3A1213771E62709D00FED42F /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		3A1213851E6275F600FED42F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3AB0DCE51E626CFF009E21D1 /* SkrubNow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkrubNow.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AB0DCE81E626CFF009E21D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3AB0DCEA1E626CFF009E21D1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3AB0DCED1E626CFF009E21D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3AB0DCEF1E626D00009E21D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3AB0DCF21E626D00009E21D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3AB0DCF41E626D00009E21D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3AB0DCF91E626D00009E21D1 /* SkrubNowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SkrubNowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AB0DCFD1E626D00009E21D1 /* SkrubNowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkrubNowTests.swift; sourceTree = "<group>"; };
+		3AB0DCFF1E626D00009E21D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3AB0DD041E626D00009E21D1 /* SkrubNowUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SkrubNowUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AB0DD081E626D00009E21D1 /* SkrubNowUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkrubNowUITests.swift; sourceTree = "<group>"; };
+		3AB0DD0A1E626D00009E21D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		416D2221AE00596DFE0A5BF0 /* Pods_SkrubNowTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SkrubNowTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D35F9C08FC7569DB8DC35A1 /* Pods-SkrubNow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkrubNow.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SkrubNow/Pods-SkrubNow.debug.xcconfig"; sourceTree = "<group>"; };
+		7B3B1C10D976FDA35E325C42 /* Pods_SkrubNow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SkrubNow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFFE275A29299798CDDF7408 /* Pods-SkrubNowUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkrubNowUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SkrubNowUITests/Pods-SkrubNowUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E360227A2C57D8B2CF152077 /* Pods-SkrubNowTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkrubNowTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SkrubNowTests/Pods-SkrubNowTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E3BE138C350C618B5B5E9B66 /* Pods_SkrubNowUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SkrubNowUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EACFA95D47CBF8979AF29144 /* Pods-SkrubNowUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkrubNowUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SkrubNowUITests/Pods-SkrubNowUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		EE6FE141300A3EC1C1696FE2 /* Pods-SkrubNowTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkrubNowTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SkrubNowTests/Pods-SkrubNowTests.release.xcconfig"; sourceTree = "<group>"; };
+		FDA6BCBA5083BD07C9574D2D /* Pods-SkrubNow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkrubNow.release.xcconfig"; path = "Pods/Target Support Files/Pods-SkrubNow/Pods-SkrubNow.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3AB0DCE21E626CFF009E21D1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BE61402CD349E2F5440BABE /* Pods_SkrubNow.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3AB0DCF61E626D00009E21D1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0CB788FD50D029BDA22C238 /* Pods_SkrubNowTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3AB0DD011E626D00009E21D1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				645350CA4CD1E2E06B3BDCF8 /* Pods_SkrubNowUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3AB0DCDC1E626CFF009E21D1 = {
+			isa = PBXGroup;
+			children = (
+				3AB0DCE71E626CFF009E21D1 /* SkrubNow */,
+				3AB0DCFC1E626D00009E21D1 /* SkrubNowTests */,
+				3AB0DD071E626D00009E21D1 /* SkrubNowUITests */,
+				3AB0DCE61E626CFF009E21D1 /* Products */,
+				C09CD04F551800E7DB756BB4 /* Pods */,
+				86E202F3B10874BBDB879AE4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3AB0DCE61E626CFF009E21D1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3AB0DCE51E626CFF009E21D1 /* SkrubNow.app */,
+				3AB0DCF91E626D00009E21D1 /* SkrubNowTests.xctest */,
+				3AB0DD041E626D00009E21D1 /* SkrubNowUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3AB0DCE71E626CFF009E21D1 /* SkrubNow */ = {
+			isa = PBXGroup;
+			children = (
+				3A1213851E6275F600FED42F /* GoogleService-Info.plist */,
+				3A12136C1E62709D00FED42F /* CarInformationViewController.swift */,
+				3A12136D1E62709D00FED42F /* CarInformationViewController.xib */,
+				3A12136E1E62709D00FED42F /* CreditCardViewController.swift */,
+				3A12136F1E62709D00FED42F /* CreditCardViewController.xib */,
+				3A1213701E62709D00FED42F /* FirebaseData.swift */,
+				3A1213711E62709D00FED42F /* RequestedWashViewController.swift */,
+				3A1213721E62709D00FED42F /* RequestedWashViewController.xib */,
+				3A1213731E62709D00FED42F /* ScheduleData.swift */,
+				3A1213741E62709D00FED42F /* ScheduleViewController.swift */,
+				3A1213751E62709D00FED42F /* ScheduleViewController.xib */,
+				3A1213761E62709D00FED42F /* UserInfo.swift */,
+				3A1213771E62709D00FED42F /* ViewController.xib */,
+				3AB0DCE81E626CFF009E21D1 /* AppDelegate.swift */,
+				3AB0DCEA1E626CFF009E21D1 /* ViewController.swift */,
+				3AB0DCEC1E626CFF009E21D1 /* Main.storyboard */,
+				3AB0DCEF1E626D00009E21D1 /* Assets.xcassets */,
+				3AB0DCF11E626D00009E21D1 /* LaunchScreen.storyboard */,
+				3AB0DCF41E626D00009E21D1 /* Info.plist */,
+			);
+			path = SkrubNow;
+			sourceTree = "<group>";
+		};
+		3AB0DCFC1E626D00009E21D1 /* SkrubNowTests */ = {
+			isa = PBXGroup;
+			children = (
+				3AB0DCFD1E626D00009E21D1 /* SkrubNowTests.swift */,
+				3AB0DCFF1E626D00009E21D1 /* Info.plist */,
+			);
+			path = SkrubNowTests;
+			sourceTree = "<group>";
+		};
+		3AB0DD071E626D00009E21D1 /* SkrubNowUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3AB0DD081E626D00009E21D1 /* SkrubNowUITests.swift */,
+				3AB0DD0A1E626D00009E21D1 /* Info.plist */,
+			);
+			path = SkrubNowUITests;
+			sourceTree = "<group>";
+		};
+		86E202F3B10874BBDB879AE4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7B3B1C10D976FDA35E325C42 /* Pods_SkrubNow.framework */,
+				416D2221AE00596DFE0A5BF0 /* Pods_SkrubNowTests.framework */,
+				E3BE138C350C618B5B5E9B66 /* Pods_SkrubNowUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C09CD04F551800E7DB756BB4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4D35F9C08FC7569DB8DC35A1 /* Pods-SkrubNow.debug.xcconfig */,
+				FDA6BCBA5083BD07C9574D2D /* Pods-SkrubNow.release.xcconfig */,
+				E360227A2C57D8B2CF152077 /* Pods-SkrubNowTests.debug.xcconfig */,
+				EE6FE141300A3EC1C1696FE2 /* Pods-SkrubNowTests.release.xcconfig */,
+				EACFA95D47CBF8979AF29144 /* Pods-SkrubNowUITests.debug.xcconfig */,
+				CFFE275A29299798CDDF7408 /* Pods-SkrubNowUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3AB0DCE41E626CFF009E21D1 /* SkrubNow */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3AB0DD0D1E626D00009E21D1 /* Build configuration list for PBXNativeTarget "SkrubNow" */;
+			buildPhases = (
+				15AB4D3909AD73E0BB64E30E /* [CP] Check Pods Manifest.lock */,
+				3AB0DCE11E626CFF009E21D1 /* Sources */,
+				3AB0DCE21E626CFF009E21D1 /* Frameworks */,
+				3AB0DCE31E626CFF009E21D1 /* Resources */,
+				BAB6C9EB40B0EADDE73D4FDD /* [CP] Embed Pods Frameworks */,
+				9A41B87486C62F97F06857CB /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SkrubNow;
+			productName = SkrubNow;
+			productReference = 3AB0DCE51E626CFF009E21D1 /* SkrubNow.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3AB0DCF81E626D00009E21D1 /* SkrubNowTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3AB0DD101E626D00009E21D1 /* Build configuration list for PBXNativeTarget "SkrubNowTests" */;
+			buildPhases = (
+				40D40F0F7F440716DF2E7F6E /* [CP] Check Pods Manifest.lock */,
+				3AB0DCF51E626D00009E21D1 /* Sources */,
+				3AB0DCF61E626D00009E21D1 /* Frameworks */,
+				3AB0DCF71E626D00009E21D1 /* Resources */,
+				50D17D57080B2D222B45C4DB /* [CP] Embed Pods Frameworks */,
+				B098B03A8DD8F006F2F3F9A4 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3AB0DCFB1E626D00009E21D1 /* PBXTargetDependency */,
+			);
+			name = SkrubNowTests;
+			productName = SkrubNowTests;
+			productReference = 3AB0DCF91E626D00009E21D1 /* SkrubNowTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3AB0DD031E626D00009E21D1 /* SkrubNowUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3AB0DD131E626D00009E21D1 /* Build configuration list for PBXNativeTarget "SkrubNowUITests" */;
+			buildPhases = (
+				C943A4547755491F3F911CCC /* [CP] Check Pods Manifest.lock */,
+				3AB0DD001E626D00009E21D1 /* Sources */,
+				3AB0DD011E626D00009E21D1 /* Frameworks */,
+				3AB0DD021E626D00009E21D1 /* Resources */,
+				35EEEBA68CB69BE3E24DD663 /* [CP] Embed Pods Frameworks */,
+				10F93D6AA1BF8B03B5C88099 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3AB0DD061E626D00009E21D1 /* PBXTargetDependency */,
+			);
+			name = SkrubNowUITests;
+			productName = SkrubNowUITests;
+			productReference = 3AB0DD041E626D00009E21D1 /* SkrubNowUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3AB0DCDD1E626CFF009E21D1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = Harsh;
+				TargetAttributes = {
+					3AB0DCE41E626CFF009E21D1 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = GKC9DWS5N4;
+						ProvisioningStyle = Automatic;
+					};
+					3AB0DCF81E626D00009E21D1 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 556357W9A6;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 3AB0DCE41E626CFF009E21D1;
+					};
+					3AB0DD031E626D00009E21D1 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 556357W9A6;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 3AB0DCE41E626CFF009E21D1;
+					};
+				};
+			};
+			buildConfigurationList = 3AB0DCE01E626CFF009E21D1 /* Build configuration list for PBXProject "SkrubNow" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3AB0DCDC1E626CFF009E21D1;
+			productRefGroup = 3AB0DCE61E626CFF009E21D1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3AB0DCE41E626CFF009E21D1 /* SkrubNow */,
+				3AB0DCF81E626D00009E21D1 /* SkrubNowTests */,
+				3AB0DD031E626D00009E21D1 /* SkrubNowUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3AB0DCE31E626CFF009E21D1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A12137A1E62709D00FED42F /* CarInformationViewController.xib in Resources */,
+				3AB0DCF31E626D00009E21D1 /* LaunchScreen.storyboard in Resources */,
+				3A1213861E6275F600FED42F /* GoogleService-Info.plist in Resources */,
+				3A1213841E62709D00FED42F /* ViewController.xib in Resources */,
+				3A12137F1E62709D00FED42F /* RequestedWashViewController.xib in Resources */,
+				3A1213821E62709D00FED42F /* ScheduleViewController.xib in Resources */,
+				3AB0DCF01E626D00009E21D1 /* Assets.xcassets in Resources */,
+				3AB0DCEE1E626CFF009E21D1 /* Main.storyboard in Resources */,
+				3A12137C1E62709D00FED42F /* CreditCardViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3AB0DCF71E626D00009E21D1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3AB0DD021E626D00009E21D1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		10F93D6AA1BF8B03B5C88099 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SkrubNowUITests/Pods-SkrubNowUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		15AB4D3909AD73E0BB64E30E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		35EEEBA68CB69BE3E24DD663 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SkrubNowUITests/Pods-SkrubNowUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		40D40F0F7F440716DF2E7F6E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		50D17D57080B2D222B45C4DB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SkrubNowTests/Pods-SkrubNowTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9A41B87486C62F97F06857CB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SkrubNow/Pods-SkrubNow-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B098B03A8DD8F006F2F3F9A4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SkrubNowTests/Pods-SkrubNowTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BAB6C9EB40B0EADDE73D4FDD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SkrubNow/Pods-SkrubNow-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C943A4547755491F3F911CCC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3AB0DCE11E626CFF009E21D1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A12137E1E62709D00FED42F /* RequestedWashViewController.swift in Sources */,
+				3A12137D1E62709D00FED42F /* FirebaseData.swift in Sources */,
+				3A1213791E62709D00FED42F /* CarInformationViewController.swift in Sources */,
+				3A1213811E62709D00FED42F /* ScheduleViewController.swift in Sources */,
+				3AB0DCEB1E626CFF009E21D1 /* ViewController.swift in Sources */,
+				3A1213801E62709D00FED42F /* ScheduleData.swift in Sources */,
+				3AB0DCE91E626CFF009E21D1 /* AppDelegate.swift in Sources */,
+				3A1213831E62709D00FED42F /* UserInfo.swift in Sources */,
+				3A12137B1E62709D00FED42F /* CreditCardViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3AB0DCF51E626D00009E21D1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AB0DCFE1E626D00009E21D1 /* SkrubNowTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3AB0DD001E626D00009E21D1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AB0DD091E626D00009E21D1 /* SkrubNowUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3AB0DCFB1E626D00009E21D1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3AB0DCE41E626CFF009E21D1 /* SkrubNow */;
+			targetProxy = 3AB0DCFA1E626D00009E21D1 /* PBXContainerItemProxy */;
+		};
+		3AB0DD061E626D00009E21D1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3AB0DCE41E626CFF009E21D1 /* SkrubNow */;
+			targetProxy = 3AB0DD051E626D00009E21D1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3AB0DCEC1E626CFF009E21D1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3AB0DCED1E626CFF009E21D1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3AB0DCF11E626D00009E21D1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3AB0DCF21E626D00009E21D1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3AB0DD0B1E626D00009E21D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3AB0DD0C1E626D00009E21D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3AB0DD0E1E626D00009E21D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D35F9C08FC7569DB8DC35A1 /* Pods-SkrubNow.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = GKC9DWS5N4;
+				INFOPLIST_FILE = SkrubNow/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Skrub.SkrubNow;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		3AB0DD0F1E626D00009E21D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FDA6BCBA5083BD07C9574D2D /* Pods-SkrubNow.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = GKC9DWS5N4;
+				INFOPLIST_FILE = SkrubNow/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Skrub.SkrubNow;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		3AB0DD111E626D00009E21D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E360227A2C57D8B2CF152077 /* Pods-SkrubNowTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 556357W9A6;
+				INFOPLIST_FILE = SkrubNowTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Skrub.SkrubNowTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SkrubNow.app/SkrubNow";
+			};
+			name = Debug;
+		};
+		3AB0DD121E626D00009E21D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE6FE141300A3EC1C1696FE2 /* Pods-SkrubNowTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 556357W9A6;
+				INFOPLIST_FILE = SkrubNowTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Skrub.SkrubNowTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SkrubNow.app/SkrubNow";
+			};
+			name = Release;
+		};
+		3AB0DD141E626D00009E21D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EACFA95D47CBF8979AF29144 /* Pods-SkrubNowUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 556357W9A6;
+				INFOPLIST_FILE = SkrubNowUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Skrub.SkrubNowUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = SkrubNow;
+			};
+			name = Debug;
+		};
+		3AB0DD151E626D00009E21D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CFFE275A29299798CDDF7408 /* Pods-SkrubNowUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 556357W9A6;
+				INFOPLIST_FILE = SkrubNowUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Skrub.SkrubNowUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = SkrubNow;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3AB0DCE01E626CFF009E21D1 /* Build configuration list for PBXProject "SkrubNow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AB0DD0B1E626D00009E21D1 /* Debug */,
+				3AB0DD0C1E626D00009E21D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3AB0DD0D1E626D00009E21D1 /* Build configuration list for PBXNativeTarget "SkrubNow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AB0DD0E1E626D00009E21D1 /* Debug */,
+				3AB0DD0F1E626D00009E21D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3AB0DD101E626D00009E21D1 /* Build configuration list for PBXNativeTarget "SkrubNowTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AB0DD111E626D00009E21D1 /* Debug */,
+				3AB0DD121E626D00009E21D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3AB0DD131E626D00009E21D1 /* Build configuration list for PBXNativeTarget "SkrubNowUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AB0DD141E626D00009E21D1 /* Debug */,
+				3AB0DD151E626D00009E21D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3AB0DCDD1E626CFF009E21D1 /* Project object */;
+}

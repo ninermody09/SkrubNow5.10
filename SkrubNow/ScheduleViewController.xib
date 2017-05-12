@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ScheduleViewController" customModule="asdfsdf" customModuleProvider="target">
+            <connections>
+                <outlet property="cancelButton" destination="5xk-Lr-wUb" id="Odg-mv-iJp"/>
+                <outlet property="doneButton" destination="ZF2-cs-Zsm" id="Amk-T7-63n"/>
+                <outlet property="pickerView" destination="r3P-cl-08k" id="ZcM-fQ-PCR"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewWithContent" destination="r9q-UH-lsQ" id="ccc-Bq-NHu"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.98999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r9q-UH-lsQ">
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What time today works best for you?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XLO-Gh-5JD">
+                            <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                            <color key="textColor" red="0.21176470589999999" green="0.58039215690000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="esS-1M-FWM">
+                            <string key="text">To ensure quality, we like to give our Skrub technicians a time frame for when they can wash your car. Most washes take up to an hour. </string>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.21176470589999999" green="0.58039215690000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="51W-0r-oLG">
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="skrubLogo" translatesAutoresizingMaskIntoConstraints="NO" id="i3T-kd-2aT">
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="rv2-Ki-i3C"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iln-Qj-YYb">
+                                    <attributedString key="attributedText">
+                                        <fragment content="Time">
+                                            <attributes>
+                                                <color key="NSColor" red="0.21176470588235294" green="0.58039215686274515" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="50" name="HelveticaNeue-Thin"/>
+                                                <font key="NSOriginalFont" size="50" name="HelveticaNeue-Thin"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="i3T-kd-2aT" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="51W-0r-oLG" secondAttribute="leading" constant="75" id="01a-aa-9o0"/>
+                                <constraint firstItem="i3T-kd-2aT" firstAttribute="centerY" secondItem="iln-Qj-YYb" secondAttribute="centerY" id="05a-zb-dna"/>
+                                <constraint firstItem="iln-Qj-YYb" firstAttribute="centerX" secondItem="51W-0r-oLG" secondAttribute="centerX" constant="25" id="NTI-OT-kml"/>
+                                <constraint firstItem="i3T-kd-2aT" firstAttribute="top" secondItem="51W-0r-oLG" secondAttribute="top" constant="5" id="bCC-Ql-yQo"/>
+                                <constraint firstItem="iln-Qj-YYb" firstAttribute="leading" secondItem="i3T-kd-2aT" secondAttribute="trailing" constant="5" id="cQS-Mh-K9E"/>
+                                <constraint firstAttribute="bottom" secondItem="i3T-kd-2aT" secondAttribute="bottom" constant="5" id="u4a-VD-lIK"/>
+                            </constraints>
+                        </view>
+                        <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r3P-cl-08k">
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="r3P-cl-08k" secondAttribute="height" multiplier="40:27" id="StE-BD-LD1"/>
+                            </constraints>
+                        </pickerView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5xk-Lr-wUb">
+                            <color key="backgroundColor" red="0.21176470589999999" green="0.58039215690000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" type="system" weight="thin" pointSize="23"/>
+                            <state key="normal" title="Cancel">
+                                <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </state>
+                            <connections>
+                                <action selector="doneButtonPressed:" destination="-1" eventType="touchUpInside" id="45P-XO-e8t"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZF2-cs-Zsm">
+                            <color key="backgroundColor" red="0.21176470589999999" green="0.58039215690000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" type="system" weight="thin" pointSize="22"/>
+                            <state key="normal" title="Done">
+                                <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </state>
+                            <connections>
+                                <action selector="doneButtonPressed:" destination="-1" eventType="touchUpInside" id="p1p-5q-xSu"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="r3P-cl-08k" firstAttribute="centerX" secondItem="r9q-UH-lsQ" secondAttribute="centerX" id="46D-cI-czm"/>
+                        <constraint firstAttribute="trailing" secondItem="XLO-Gh-5JD" secondAttribute="trailing" constant="10" id="B6Y-GZ-xbg"/>
+                        <constraint firstItem="XLO-Gh-5JD" firstAttribute="top" secondItem="51W-0r-oLG" secondAttribute="bottom" constant="10" id="JZ5-yh-NZB"/>
+                        <constraint firstItem="51W-0r-oLG" firstAttribute="top" secondItem="r9q-UH-lsQ" secondAttribute="top" id="LFI-2o-7ud"/>
+                        <constraint firstItem="r3P-cl-08k" firstAttribute="top" secondItem="esS-1M-FWM" secondAttribute="bottom" constant="10" id="PkV-PV-9ca"/>
+                        <constraint firstItem="esS-1M-FWM" firstAttribute="top" secondItem="XLO-Gh-5JD" secondAttribute="bottom" constant="10" id="Qlr-Pi-rZi"/>
+                        <constraint firstItem="XLO-Gh-5JD" firstAttribute="leading" secondItem="r9q-UH-lsQ" secondAttribute="leading" constant="10" id="SbG-Oa-VbP"/>
+                        <constraint firstItem="51W-0r-oLG" firstAttribute="leading" secondItem="r9q-UH-lsQ" secondAttribute="leading" constant="10" id="Yg7-g0-5JM"/>
+                        <constraint firstAttribute="trailing" secondItem="ZF2-cs-Zsm" secondAttribute="trailing" constant="10" id="Zze-HE-Xb7"/>
+                        <constraint firstItem="esS-1M-FWM" firstAttribute="leading" secondItem="r9q-UH-lsQ" secondAttribute="leading" constant="10" id="bg9-Kd-M4u"/>
+                        <constraint firstAttribute="bottom" secondItem="5xk-Lr-wUb" secondAttribute="bottom" constant="10" id="doR-XT-NUz"/>
+                        <constraint firstItem="ZF2-cs-Zsm" firstAttribute="width" secondItem="5xk-Lr-wUb" secondAttribute="width" id="iyI-lr-eaH"/>
+                        <constraint firstItem="5xk-Lr-wUb" firstAttribute="leading" secondItem="r9q-UH-lsQ" secondAttribute="leading" constant="10" id="lPX-Gm-kBc"/>
+                        <constraint firstAttribute="trailing" secondItem="esS-1M-FWM" secondAttribute="trailing" constant="10" id="oZ0-Xb-sIk"/>
+                        <constraint firstItem="ZF2-cs-Zsm" firstAttribute="centerY" secondItem="5xk-Lr-wUb" secondAttribute="centerY" id="sio-oZ-GFh"/>
+                        <constraint firstAttribute="trailing" secondItem="51W-0r-oLG" secondAttribute="trailing" constant="10" id="t6O-uz-SCx"/>
+                        <constraint firstItem="5xk-Lr-wUb" firstAttribute="top" secondItem="r3P-cl-08k" secondAttribute="bottom" constant="-7" id="tVg-SR-RpG"/>
+                        <constraint firstItem="ZF2-cs-Zsm" firstAttribute="leading" secondItem="5xk-Lr-wUb" secondAttribute="trailing" constant="10" id="u2i-gj-c6E"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="r9q-UH-lsQ" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="2Sr-9V-Kjt"/>
+                <constraint firstAttribute="trailing" secondItem="r9q-UH-lsQ" secondAttribute="trailing" constant="10" id="I25-Kk-pVN"/>
+                <constraint firstItem="r9q-UH-lsQ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="KEq-TW-ess"/>
+                <constraint firstItem="r9q-UH-lsQ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="jwc-gO-Ep9"/>
+            </constraints>
+            <point key="canvasLocation" x="76.5" y="95.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="skrubLogo" width="834" height="498"/>
+    </resources>
+</document>
