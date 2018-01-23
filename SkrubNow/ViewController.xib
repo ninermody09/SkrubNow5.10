@@ -11,9 +11,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController" customModule="SkrubNow" customModuleProvider="target">
             <connections>
+                <outlet property="heightOfTable" destination="txp-i9-26A" id="yrK-tb-5G1"/>
                 <outlet property="mapKitView" destination="WIE-Im-jN2" id="fjg-nn-5sd"/>
                 <outlet property="requestWashButton" destination="FEX-fb-PPj" id="Q8j-jI-9ZM"/>
                 <outlet property="searchBAr" destination="2ch-J0-XHN" id="YyN-UG-w7P"/>
+                <outlet property="searchTableView" destination="Uub-HI-xB5" id="EeL-KQ-428"/>
                 <outlet property="view" destination="iN0-l3-epB" id="Z2c-Ej-7fX"/>
             </connections>
         </placeholder>
@@ -26,7 +28,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                 </imageView>
                 <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="WIE-Im-jN2">
-                    <rect key="frame" x="10" y="114" width="355" height="469"/>
+                    <rect key="frame" x="10" y="94" width="355" height="469"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="469" id="sSR-sH-NRE"/>
                     </constraints>
@@ -46,7 +48,7 @@
                     </connections>
                 </button>
                 <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T2c-Cg-Gnn">
-                    <rect key="frame" x="10" y="114" width="355" height="469"/>
+                    <rect key="frame" x="10" y="94" width="355" height="469"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="carPinImage" translatesAutoresizingMaskIntoConstraints="NO" id="1XX-UQ-d9a">
                             <rect key="frame" x="161" y="198" width="33" height="43"/>
@@ -62,24 +64,34 @@
                         <constraint firstItem="1XX-UQ-d9a" firstAttribute="centerY" secondItem="T2c-Cg-Gnn" secondAttribute="centerY" constant="-15" id="d9B-Nr-yEg"/>
                     </constraints>
                 </view>
-                <searchBar contentMode="redraw" placeholder="Enter Address" translatesAutoresizingMaskIntoConstraints="NO" id="2ch-J0-XHN">
+                <searchBar contentMode="redraw" placeholder="Enter Address" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2ch-J0-XHN">
                     <rect key="frame" x="10" y="50" width="355" height="44"/>
                     <textInputTraits key="textInputTraits"/>
                 </searchBar>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Uub-HI-xB5">
+                    <rect key="frame" x="10" y="94" width="355" height="0.0"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" id="txp-i9-26A"/>
+                    </constraints>
+                </tableView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="T2c-Cg-Gnn" firstAttribute="bottom" secondItem="WIE-Im-jN2" secondAttribute="bottom" id="26s-jS-5eu"/>
                 <constraint firstItem="WIE-Im-jN2" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="7zw-HW-lau"/>
+                <constraint firstAttribute="trailing" secondItem="Uub-HI-xB5" secondAttribute="trailing" constant="10" id="Bg5-AY-BRu"/>
                 <constraint firstItem="PZ5-Yo-TOx" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Igm-f6-aWT"/>
                 <constraint firstItem="2ch-J0-XHN" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="50" id="JWg-mG-V0C"/>
                 <constraint firstAttribute="trailing" secondItem="WIE-Im-jN2" secondAttribute="trailing" constant="10" id="Khs-ac-Bjo"/>
+                <constraint firstItem="Uub-HI-xB5" firstAttribute="top" secondItem="2ch-J0-XHN" secondAttribute="bottom" id="QL4-4o-vsi"/>
                 <constraint firstItem="T2c-Cg-Gnn" firstAttribute="leading" secondItem="WIE-Im-jN2" secondAttribute="leading" id="RVE-mh-4Ai"/>
                 <constraint firstItem="T2c-Cg-Gnn" firstAttribute="trailing" secondItem="WIE-Im-jN2" secondAttribute="trailing" id="UCP-0L-Ua8"/>
                 <constraint firstAttribute="trailing" secondItem="FEX-fb-PPj" secondAttribute="trailing" constant="10" id="USu-N6-Dvp"/>
                 <constraint firstItem="T2c-Cg-Gnn" firstAttribute="top" secondItem="WIE-Im-jN2" secondAttribute="top" id="Zcg-R2-9g0"/>
-                <constraint firstItem="T2c-Cg-Gnn" firstAttribute="top" secondItem="2ch-J0-XHN" secondAttribute="bottom" constant="20" id="daT-Bb-fcu"/>
+                <constraint firstItem="T2c-Cg-Gnn" firstAttribute="top" secondItem="2ch-J0-XHN" secondAttribute="bottom" id="daT-Bb-fcu"/>
                 <constraint firstItem="2ch-J0-XHN" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="efM-9d-h9e"/>
+                <constraint firstItem="Uub-HI-xB5" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="hxX-wX-pg8"/>
                 <constraint firstAttribute="trailing" secondItem="PZ5-Yo-TOx" secondAttribute="trailing" id="t9R-RQ-0Pm"/>
                 <constraint firstAttribute="bottom" secondItem="FEX-fb-PPj" secondAttribute="bottom" constant="30" id="utV-gE-UUc"/>
                 <constraint firstItem="PZ5-Yo-TOx" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="xPv-8S-Hc5"/>
