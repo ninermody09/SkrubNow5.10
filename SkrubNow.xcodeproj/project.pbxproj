@@ -29,6 +29,8 @@
 		3AB0DD091E626D00009E21D1 /* SkrubNowUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB0DD081E626D00009E21D1 /* SkrubNowUITests.swift */; };
 		645350CA4CD1E2E06B3BDCF8 /* Pods_SkrubNowUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3BE138C350C618B5B5E9B66 /* Pods_SkrubNowUITests.framework */; };
 		6BE61402CD349E2F5440BABE /* Pods_SkrubNow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B3B1C10D976FDA35E325C42 /* Pods_SkrubNow.framework */; };
+		A1E56A8D2016C003000506B9 /* acuityWebPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E56A8B2016C003000506B9 /* acuityWebPageViewController.swift */; };
+		A1E56A8E2016C003000506B9 /* acuityWebPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1E56A8C2016C003000506B9 /* acuityWebPageViewController.xib */; };
 		F0CB788FD50D029BDA22C238 /* Pods_SkrubNowTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 416D2221AE00596DFE0A5BF0 /* Pods_SkrubNowTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +81,8 @@
 		416D2221AE00596DFE0A5BF0 /* Pods_SkrubNowTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SkrubNowTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D35F9C08FC7569DB8DC35A1 /* Pods-SkrubNow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkrubNow.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SkrubNow/Pods-SkrubNow.debug.xcconfig"; sourceTree = "<group>"; };
 		7B3B1C10D976FDA35E325C42 /* Pods_SkrubNow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SkrubNow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1E56A8B2016C003000506B9 /* acuityWebPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = acuityWebPageViewController.swift; sourceTree = "<group>"; };
+		A1E56A8C2016C003000506B9 /* acuityWebPageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = acuityWebPageViewController.xib; sourceTree = "<group>"; };
 		CFFE275A29299798CDDF7408 /* Pods-SkrubNowUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkrubNowUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SkrubNowUITests/Pods-SkrubNowUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E360227A2C57D8B2CF152077 /* Pods-SkrubNowTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkrubNowTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SkrubNowTests/Pods-SkrubNowTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E3BE138C350C618B5B5E9B66 /* Pods_SkrubNowUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SkrubNowUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -159,6 +163,8 @@
 				3AB0DCEF1E626D00009E21D1 /* Assets.xcassets */,
 				3AB0DCF11E626D00009E21D1 /* LaunchScreen.storyboard */,
 				3AB0DCF41E626D00009E21D1 /* Info.plist */,
+				A1E56A8B2016C003000506B9 /* acuityWebPageViewController.swift */,
+				A1E56A8C2016C003000506B9 /* acuityWebPageViewController.xib */,
 			);
 			path = SkrubNow;
 			sourceTree = "<group>";
@@ -330,6 +336,7 @@
 				3A12137F1E62709D00FED42F /* RequestedWashViewController.xib in Resources */,
 				3A1213821E62709D00FED42F /* ScheduleViewController.xib in Resources */,
 				3AB0DCF01E626D00009E21D1 /* Assets.xcassets in Resources */,
+				A1E56A8E2016C003000506B9 /* acuityWebPageViewController.xib in Resources */,
 				3AB0DCEE1E626CFF009E21D1 /* Main.storyboard in Resources */,
 				3A12137C1E62709D00FED42F /* CreditCardViewController.xib in Resources */,
 			);
@@ -497,6 +504,7 @@
 				3A12137E1E62709D00FED42F /* RequestedWashViewController.swift in Sources */,
 				3A12137D1E62709D00FED42F /* FirebaseData.swift in Sources */,
 				3A1213791E62709D00FED42F /* CarInformationViewController.swift in Sources */,
+				A1E56A8D2016C003000506B9 /* acuityWebPageViewController.swift in Sources */,
 				3A1213811E62709D00FED42F /* ScheduleViewController.swift in Sources */,
 				3AB0DCEB1E626CFF009E21D1 /* ViewController.swift in Sources */,
 				3A1213801E62709D00FED42F /* ScheduleData.swift in Sources */,
