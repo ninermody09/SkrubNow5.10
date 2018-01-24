@@ -15,7 +15,7 @@ class acuityWebPageViewController: UIViewController {
     @IBOutlet weak var webview: UIWebView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.webview.layer.cornerRadius = 10.0
         self.initScheduler()
     }
 
