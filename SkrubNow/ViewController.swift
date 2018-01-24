@@ -39,8 +39,31 @@ class ViewController: UIViewController, MKMapViewDelegate, UISearchBarDelegate, 
         searchBAr.delegate = self
         searchTableView.delegate = self
         searchTableView.dataSource = self as? UITableViewDataSource
-        searchTableView.layer.cornerRadius = 10.0
+//        searchTableView.layer.cornerRadius = 10.0
         searchTableView.isHidden = true
+        
+        let rectShape = CAShapeLayer()
+        rectShape.bounds = self.searchBAr.frame
+        rectShape.position = self.searchBAr.center
+        rectShape.path = UIBezierPath(roundedRect: self.searchBAr.bounds, byRoundingCorners: [.topRight, .topLeft], cornerRadii: CGSize(width: 10, height: 10)).cgPath
+        self.searchBAr.layer.mask = rectShape
+        
+        let rectShape2 = CAShapeLayer()
+        rectShape2.bounds = self.searchTableView.frame
+        rectShape2.position = self.searchTableView.center
+        rectShape2.path = UIBezierPath(roundedRect: self.searchTableView.bounds, byRoundingCorners: [.bottomLeft, .bottomRight], cornerRadii: CGSize(width: 10, height: 10)).cgPath
+        self.searchTableView.layer.mask = rectShape2
+        
+        let rectShape3 = CAShapeLayer()
+        rectShape3.bounds = self.mapKitView.frame
+        rectShape3.position = self.mapKitView.center
+        rectShape3.path = UIBezierPath(roundedRect: self.mapKitView.bounds, byRoundingCorners: [.bottomLeft, .bottomRight], cornerRadii: CGSize(width: 10, height: 10)).cgPath
+        self.mapKitView.layer.mask = rectShape3
+        
+        let cancelButtonAttributes: [String: AnyObject] = [NSForegroundColorAttributeName: UIColor.black]
+        
+        UIBarButtonItem.appearance(whenContainedInInstancesOf: [UISearchBar.self]).setTitleTextAttributes(cancelButtonAttributes, for: .normal)
+        
        // searchTVC = SearchTableViewController.init(nibName: "SearchTableViewController", bundle: nil)
         //resultSearchController = UISearchController(searchResultsController: searchTVC)
       //  resultSearchController?.delegate = self as UISearchControllerDelegate
@@ -49,7 +72,7 @@ class ViewController: UIViewController, MKMapViewDelegate, UISearchBarDelegate, 
         //mapkit
         self.mapKitView.delegate = self
         self.mapKitView.showsUserLocation = true
-        self.mapKitView.layer.cornerRadius = 10.0
+//        self.mapKitView.layer.cornerRadius = 10.0
         self.requestWashButton.layer.cornerRadius = 10.0
         
         locationManager.requestWhenInUseAuthorization()

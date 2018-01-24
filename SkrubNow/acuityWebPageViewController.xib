@@ -1,16 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="17B1003" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="acuityWebPageViewController" customModule="SkrubNow" customModuleProvider="target">
             <connections>
+                <outlet property="cancelButton" destination="9vD-Iq-n5d" id="Irq-SJ-9q1"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="webview" destination="DIx-Mh-NEV" id="Twd-rm-esg"/>
             </connections>
@@ -24,19 +30,32 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                 </imageView>
                 <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DIx-Mh-NEV">
-                    <rect key="frame" x="1" y="20" width="373" height="637"/>
+                    <rect key="frame" x="1" y="84" width="373" height="573"/>
                     <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </webView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9vD-Iq-n5d">
+                    <rect key="frame" x="302" y="30" width="53" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="OrC-ZV-Xji"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                    <state key="normal" title="Cancel"/>
+                    <connections>
+                        <action selector="cancelButtonPressed:" destination="-1" eventType="touchUpInside" id="qVE-Kv-wej"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="s7W-LS-Q5D" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="5Wd-0g-DaP"/>
                 <constraint firstAttribute="bottom" secondItem="DIx-Mh-NEV" secondAttribute="bottom" constant="10" id="Bjh-sI-YbB"/>
-                <constraint firstItem="DIx-Mh-NEV" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="CTG-4y-zlh"/>
+                <constraint firstItem="DIx-Mh-NEV" firstAttribute="top" secondItem="9vD-Iq-n5d" secondAttribute="bottom" constant="10" id="Ed7-Dn-ZWl"/>
                 <constraint firstAttribute="trailing" secondItem="DIx-Mh-NEV" secondAttribute="trailing" constant="1" id="ckI-r5-Opo"/>
                 <constraint firstItem="s7W-LS-Q5D" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="d1R-oe-v47"/>
                 <constraint firstAttribute="trailing" secondItem="s7W-LS-Q5D" secondAttribute="trailing" id="d9O-TR-XId"/>
+                <constraint firstAttribute="trailing" secondItem="9vD-Iq-n5d" secondAttribute="trailing" constant="20" id="hq0-l1-Qwv"/>
                 <constraint firstItem="DIx-Mh-NEV" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="1" id="sX5-Pu-RIC"/>
+                <constraint firstItem="9vD-Iq-n5d" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="30" id="vmn-Ei-TsE"/>
             </constraints>
             <point key="canvasLocation" x="33.5" y="86.5"/>
         </view>
