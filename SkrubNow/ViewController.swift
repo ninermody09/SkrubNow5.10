@@ -16,6 +16,7 @@ class ViewController: UIViewController, MKMapViewDelegate, UISearchBarDelegate, 
 
     @IBOutlet weak var heightOfTable: NSLayoutConstraint!
     
+    @IBOutlet weak var topLogo: UIImageView!
     @IBOutlet weak var searchBAr: UISearchBar!
     let kBaseURL = "http://lowcost-env.rrpikpmqwu.us-east-1.elasticbeanstalk.com/charge";
     let locationManager = CLLocationManager()
@@ -30,10 +31,25 @@ class ViewController: UIViewController, MKMapViewDelegate, UISearchBarDelegate, 
     @IBOutlet weak var requestWashButton: UIButton!
     var finalAddress:NSString = ""
     
+    
     @IBOutlet weak var searchTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //
+        
+        self.view.bringSubview(toFront: self.topLogo)
+        let keyboardToolbar = UIToolbar()
+        keyboardToolbar.sizeToFit()
+        keyboardToolbar.isTranslucent = true
+        keyboardToolbar.barTintColor = UIColor.lightGray
+        keyboardToolbar.alpha = 0.99
+        let flexible = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: self, action: nil)
+        let searchButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(searchButtonHit))
+        let cancelButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.cancel, target: self, action: #selector(cancelButtonPressed))
+        keyboardToolbar.items = [searchButton, flexible, cancelButton]
+
+        searchBAr.inputAccessoryView = keyboardToolbar
 
         //searchBar
         searchBAr.delegate = self
@@ -41,6 +57,7 @@ class ViewController: UIViewController, MKMapViewDelegate, UISearchBarDelegate, 
         searchTableView.dataSource = self as? UITableViewDataSource
 //        searchTableView.layer.cornerRadius = 10.0
         searchTableView.isHidden = true
+        searchBAr.backgroundImage = UIImage()
         
         let rectShape = CAShapeLayer()
         rectShape.bounds = self.searchBAr.frame
@@ -57,7 +74,7 @@ class ViewController: UIViewController, MKMapViewDelegate, UISearchBarDelegate, 
         let rectShape3 = CAShapeLayer()
         rectShape3.bounds = self.mapKitView.frame
         rectShape3.position = self.mapKitView.center
-        rectShape3.path = UIBezierPath(roundedRect: self.mapKitView.bounds, byRoundingCorners: [.bottomLeft, .bottomRight], cornerRadii: CGSize(width: 10, height: 10)).cgPath
+        rectShape3.path = UIBezierPath(roundedRect: self.mapKitView.bounds, byRoundingCorners: [.topLeft, .topRight], cornerRadii: CGSize(width: 10, height: 10)).cgPath
         self.mapKitView.layer.mask = rectShape3
         
         let cancelButtonAttributes: [String: AnyObject] = [NSForegroundColorAttributeName: UIColor.black]
@@ -82,7 +99,10 @@ class ViewController: UIViewController, MKMapViewDelegate, UISearchBarDelegate, 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
     }
-    
+    func cancelButtonPressed() {
+        self.resignFirstResponder()
+        self.view.endEditing(true)
+    }
     @IBAction func requestButtonPressed(_ sender: AnyObject) {
         let requestVC = acuityWebPageViewController.init(nibName:"acuityWebPageViewController", bundle: nil)
         if(self.finalAddress == ""){
@@ -113,6 +133,34 @@ class ViewController: UIViewController, MKMapViewDelegate, UISearchBarDelegate, 
         self.view.addSubview(requestVC.view)
         }
         
+    }
+    
+    func searchButtonHit() {
+        let request = MKLocalSearchRequest()
+        request.naturalLanguageQuery = self.searchBAr.text
+        request.region = mapKitView.region
+        let search = MKLocalSearch(request: request)
+        search.start { response, _ in
+            guard let response = response else {
+                let alertController = UIAlertController(title: nil, message: "Place Not Found", preferredStyle: UIAlertControllerStyle.alert)
+                alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default, handler: nil))
+                self.present(alertController, animated: true, completion: nil)
+                return
+            }
+            
+            if(response.mapItems.count < 2){
+                let pointAnnotation = MKPointAnnotation()
+                pointAnnotation.coordinate = CLLocationCoordinate2D(latitude: response.boundingRegion.center.latitude, longitude: response.boundingRegion.center.longitude)
+                
+                self.mapKitView.centerCoordinate = pointAnnotation.coordinate
+                self.finalAddress = response.mapItems[0].placemark.title as! NSString
+                
+            } else {
+                self.matchingItems = response.mapItems
+                self.displayListOfResults(listOfAddresses:response.mapItems)
+            }
+        }
+        self.view.endEditing(true)
     }
     
     //Delegate methods for Mapkid
@@ -147,33 +195,8 @@ class ViewController: UIViewController, MKMapViewDelegate, UISearchBarDelegate, 
 
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar){
-
-        let request = MKLocalSearchRequest()
-        request.naturalLanguageQuery = searchBar.text
-        request.region = mapKitView.region
-        let search = MKLocalSearch(request: request)
-        search.start { response, _ in
-            guard let response = response else {
-                let alertController = UIAlertController(title: nil, message: "Place Not Found", preferredStyle: UIAlertControllerStyle.alert)
-                alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default, handler: nil))
-                self.present(alertController, animated: true, completion: nil)
-                return
-            }
-            
-            if(response.mapItems.count < 2){
-                let pointAnnotation = MKPointAnnotation()
-                pointAnnotation.coordinate = CLLocationCoordinate2D(latitude: response.boundingRegion.center.latitude, longitude: response.boundingRegion.center.longitude)
-                
-                self.mapKitView.centerCoordinate = pointAnnotation.coordinate
-                self.finalAddress = response.mapItems[0].placemark.title as! NSString
-            
-            } else {
-                self.matchingItems = response.mapItems
-            self.displayListOfResults(listOfAddresses:response.mapItems)
-            }
-        }
+        self.searchButtonHit()
         searchBar.resignFirstResponder()
-        
     }
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -240,10 +263,14 @@ class ViewController: UIViewController, MKMapViewDelegate, UISearchBarDelegate, 
         }
     }
     
+    
+    
     //Error handling
     
     func handleError(error: NSError) {
         UIAlertController(title: "Hmmm there seems to be an error", message: error.localizedDescription, preferredStyle: UIAlertControllerStyle.alert).show(self, sender: self)
     }
 }
+
+
 
