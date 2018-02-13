@@ -9,11 +9,23 @@
 import UIKit
 import MapKit
 //import Firebase
-import Stripe
+//import Stripe
 
 
 class ViewController: UIViewController, MKMapViewDelegate, UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource {
-
+    
+    
+    @IBOutlet weak var stackViewOptions: UIStackView!
+    @IBOutlet var interiorOnlySwipe: UISwipeGestureRecognizer!
+    @IBOutlet var exteriorOnlySwipe: UISwipeGestureRecognizer!
+    @IBOutlet var fullServiceSwipe: UISwipeGestureRecognizer!
+    
+    @IBOutlet weak var fullServiceView: UIView!
+    @IBOutlet weak var exteriorOnlyView: UIView!
+    @IBOutlet weak var interiorOnlyView: UIView!
+    
+    var selectedViewName:String = ""
+    
     @IBOutlet weak var heightOfTable: NSLayoutConstraint!
     
     @IBOutlet weak var infoTableView: UITableView!
@@ -31,8 +43,9 @@ class ViewController: UIViewController, MKMapViewDelegate, UISearchBarDelegate, 
     @IBOutlet weak var mapKitView: MKMapView!
     @IBOutlet weak var requestWashButton: UIButton!
     var finalAddress:NSString = ""
-    let featuresArray: NSArray = ["Vaccum Interior", "Dash/Console/Seatwipe", "Door Jams Cleaned", "All WindowsCleaned", "Hand wash + drying aid", "Microfiber cloth dry"];
+    var featuresArray:[String] = []
     
+    @IBOutlet weak var infoLabel1: UILabel!
     @IBOutlet weak var inforView: UIView!
     
     @IBOutlet weak var infoViewHeight: NSLayoutConstraint!
@@ -40,10 +53,11 @@ class ViewController: UIViewController, MKMapViewDelegate, UISearchBarDelegate, 
     
     @IBOutlet weak var searchTableView: UITableView!
     
+    @IBOutlet weak var infoLabelPrice: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         //
-      
+        
         self.view.bringSubview(toFront: self.topLogo)
         let keyboardToolbar = UIToolbar()
         keyboardToolbar.sizeToFit()
@@ -54,17 +68,17 @@ class ViewController: UIViewController, MKMapViewDelegate, UISearchBarDelegate, 
         let searchButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(searchButtonHit))
         let cancelButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.cancel, target: self, action: #selector(cancelButtonPressed))
         keyboardToolbar.items = [searchButton, flexible, cancelButton]
-
+        
         searchBAr.inputAccessoryView = keyboardToolbar
-
-        self.inforView.isHidden = false
+        
+//        self.inforView.isHidden = false
         self.infoViewHeight.constant = 0
         
         //searchBar
         searchBAr.delegate = self
         searchTableView.delegate = self
         searchTableView.dataSource = self as? UITableViewDataSource
-//        searchTableView.layer.cornerRadius = 10.0
+        //        searchTableView.layer.cornerRadius = 10.0
         searchTableView.isHidden = true
         searchBAr.backgroundImage = UIImage()
         
@@ -90,16 +104,16 @@ class ViewController: UIViewController, MKMapViewDelegate, UISearchBarDelegate, 
         
         UIBarButtonItem.appearance(whenContainedInInstancesOf: [UISearchBar.self]).setTitleTextAttributes(cancelButtonAttributes, for: .normal)
         
-       // searchTVC = SearchTableViewController.init(nibName: "SearchTableViewController", bundle: nil)
+        // searchTVC = SearchTableViewController.init(nibName: "SearchTableViewController", bundle: nil)
         //resultSearchController = UISearchController(searchResultsController: searchTVC)
-      //  resultSearchController?.delegate = self as UISearchControllerDelegate
-       // resultSearchController?.searchBar = self.searchBAr
+        //  resultSearchController?.delegate = self as UISearchControllerDelegate
+        // resultSearchController?.searchBar = self.searchBAr
         //self.present(resultSearchController!, animated: true, completion: nil)
         //mapkit
         self.mapKitView.delegate = self
         self.mapKitView.showsUserLocation = true
-//        self.mapKitView.layer.cornerRadius = 10.0
-//        self.requestWashButton.layer.cornerRadius = 10.0
+        //        self.mapKitView.layer.cornerRadius = 10.0
+        //        self.requestWashButton.layer.cornerRadius = 10.0
         
         locationManager.requestWhenInUseAuthorization()
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
@@ -136,10 +150,10 @@ class ViewController: UIViewController, MKMapViewDelegate, UISearchBarDelegate, 
             })
         }else {
             requestVC.address = self.finalAddress as String
-        
-        requestVC.view.frame = CGRect(x:0, y:0, width: self.view.frame.size.width, height: self.view.frame.size.height)
-        self.addChildViewController(requestVC)
-        self.view.addSubview(requestVC.view)
+            
+            requestVC.view.frame = CGRect(x:0, y:0, width: self.view.frame.size.width, height: self.view.frame.size.height)
+            self.addChildViewController(requestVC)
+            self.view.addSubview(requestVC.view)
         }
         
     }
@@ -201,7 +215,7 @@ class ViewController: UIViewController, MKMapViewDelegate, UISearchBarDelegate, 
         searchBar.text = ""
         searchBar.placeholder = "Enter Address"
     }
-
+    
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar){
         self.searchButtonHit()
@@ -214,16 +228,16 @@ class ViewController: UIViewController, MKMapViewDelegate, UISearchBarDelegate, 
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if(tableView == self.searchTableView){
-        return self.matchingItems.count
+            return self.matchingItems.count
         }else if(tableView == self.infoTableView){
             return self.featuresArray.count
         }
         return 0
     }
-
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if(tableView == self.searchTableView){
-        return 50.0
+            return 50.0
         }
         return 30.0
     }
@@ -231,12 +245,12 @@ class ViewController: UIViewController, MKMapViewDelegate, UISearchBarDelegate, 
         
         var cell = tableView.dequeueReusableCell(withIdentifier: "cell")
         if(tableView == self.searchTableView){
-        if cell == nil {
-            cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
-        }
-        var address = ""
-        address = self.matchingItems[indexPath.row].placemark.title!
-        cell!.textLabel?.text = address
+            if cell == nil {
+                cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
+            }
+            var address = ""
+            address = self.matchingItems[indexPath.row].placemark.title!
+            cell!.textLabel?.text = address
         }
         else if(tableView == self.infoTableView){
             if cell == nil {
@@ -245,6 +259,8 @@ class ViewController: UIViewController, MKMapViewDelegate, UISearchBarDelegate, 
             var feature = ""
             feature = self.featuresArray[indexPath.row] as! String
             cell!.textLabel?.text = feature
+            cell!.textLabel?.textAlignment = .center
+            cell!.textLabel?.font = UIFont.systemFont(ofSize: 17, weight: UIFontWeightUltraLight)
         }
         return cell!
         
@@ -294,20 +310,108 @@ class ViewController: UIViewController, MKMapViewDelegate, UISearchBarDelegate, 
         }
     }
     
-
-    
-    @IBAction func tableSwipedUp(_ sender: UISwipeGestureRecognizer) {
-        
+    @IBAction func exteriorOnlySwipeUp(_ sender: Any) {
+       
+        self.featuresArray = [] //reset array
+        self.featuresArray = ["Hand wash + Drying aid", "Microfiber cloth dry", "Wax application", "Wheels and tires", "Tire polish", "Exterior Windows"]
+        self.infoLabel1.text = "Exterior Only"
+        self.infoLabelPrice.text = "$35+"
         self.infoTableView.delegate = self
         self.infoTableView.dataSource = self
         self.infoTableView.reloadData()
+        self.selectedViewName = "Ext"
         
         UIView.animate(withDuration: 0.5, animations: {
-                self.infoViewHeight.constant = 140.0
-                self.view.layoutIfNeeded()
-            })
+             self.inforView.isHidden = false
+            self.infoViewHeight.constant = 140.0
+            self.view.layoutIfNeeded()
+        })
+    }
+
+    @IBAction func interiorOnly(_ sender: Any) {
+        self.interiorOnlyView.alpha = 0.95
+        self.exteriorOnlyView.alpha = 0.95
+        self.fullServiceView.alpha = 0.95
+        
+        
+        self.featuresArray = []
+        self.featuresArray = ["Vaccum Interior", "Dash Console, and Seat wipe", "Windows cleaned", "Door jams cleaned"]
+        self.infoLabel1.text = "Interior Only"
+        self.infoLabelPrice.text = "$22+"
+        self.infoTableView.delegate = self
+        self.infoTableView.dataSource = self
+        self.infoTableView.reloadData()
+        self.selectedViewName = "Int"
+        UIView.animate(withDuration: 0.5, animations: {
+            self.inforView.isHidden = false
+            self.infoViewHeight.constant = 140.0
+            self.view.layoutIfNeeded()
+        })
+    }
+    
+    @IBAction func tableSwipedUp(_ sender: UISwipeGestureRecognizer) {
+        self.interiorOnlyView.alpha = 0.95
+        self.exteriorOnlyView.alpha = 0.95
+        self.fullServiceView.alpha = 0.95
+        
+       
+        self.featuresArray = []
+        self.featuresArray = ["Vaccum Interior", "Dash Console, and Seat wipe", "Windows cleaned","Hand wash + Drying aid", "Microfiber cloth dry", "Wax application", "Wheels and tires", "Tire polish", "Exterior Windows"]
+        self.infoLabel1.text = "Full Service"
+        self.infoLabelPrice.text = "$50+"
+        self.infoTableView.delegate = self
+        self.infoTableView.dataSource = self
+        self.infoTableView.reloadData()
+        self.selectedViewName = "Full"
+        UIView.animate(withDuration: 0.5, animations: {
+             self.inforView.isHidden = false
+            self.infoViewHeight.constant = 140.0
+            self.view.layoutIfNeeded()
+        })
+    }
+    
+    @IBAction func cancelServiceButtonHit(_ sender: Any) {
+        self.interiorOnlyView.alpha = 0.95
+        self.exteriorOnlyView.alpha = 0.95
+        self.fullServiceView.alpha = 0.95
+        
+        UIView.animate(withDuration: 0.5, animations: {
+            self.infoViewHeight.constant = 0
+            self.view.layoutIfNeeded()
+            self.inforView.isHidden = true
+        }, completion: { (value: Bool) in
+            self.inforView.isHidden = true})
         
     }
+    
+    @IBAction func serviceSelected(_ sender: Any) {
+        switch self.selectedViewName {
+        case "Int":
+            self.interiorOnlyView.alpha = 1.0
+            self.exteriorOnlyView.alpha = 0.80
+            self.fullServiceView.alpha = 0.80
+        case "Ext":
+            self.interiorOnlyView.alpha = 0.80
+            self.exteriorOnlyView.alpha = 1.0
+            self.fullServiceView.alpha = 0.80
+        case "Full":
+            self.interiorOnlyView.alpha = 0.80
+            self.exteriorOnlyView.alpha = 0.80
+            self.fullServiceView.alpha = 1.0
+        default:
+            self.interiorOnlyView.alpha = 0.95
+            self.exteriorOnlyView.alpha = 0.95
+            self.fullServiceView.alpha = 0.95
+        }
+
+        UIView.animate(withDuration: 0.5, animations: {
+            self.infoViewHeight.constant = 0
+            self.view.layoutIfNeeded()
+            self.inforView.isHidden = true
+        }, completion: { (value: Bool) in
+                self.inforView.isHidden = true})
+    }
+    
     
     //Error handling
     
