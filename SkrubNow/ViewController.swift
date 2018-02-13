@@ -16,6 +16,7 @@ class ViewController: UIViewController, MKMapViewDelegate, UISearchBarDelegate, 
 
     @IBOutlet weak var heightOfTable: NSLayoutConstraint!
     
+    @IBOutlet weak var infoTableView: UITableView!
     @IBOutlet weak var topLogo: UIImageView!
     @IBOutlet weak var searchBAr: UISearchBar!
     let kBaseURL = "http://lowcost-env.rrpikpmqwu.us-east-1.elasticbeanstalk.com/charge";
@@ -30,6 +31,11 @@ class ViewController: UIViewController, MKMapViewDelegate, UISearchBarDelegate, 
     @IBOutlet weak var mapKitView: MKMapView!
     @IBOutlet weak var requestWashButton: UIButton!
     var finalAddress:NSString = ""
+    let featuresArray: NSArray = ["Vaccum Interior", "Dash/Console/Seatwipe", "Door Jams Cleaned", "All WindowsCleaned", "Hand wash + drying aid", "Microfiber cloth dry"];
+    
+    @IBOutlet weak var inforView: UIView!
+    
+    @IBOutlet weak var infoViewHeight: NSLayoutConstraint!
     
     
     @IBOutlet weak var searchTableView: UITableView!
@@ -37,7 +43,7 @@ class ViewController: UIViewController, MKMapViewDelegate, UISearchBarDelegate, 
     override func viewDidLoad() {
         super.viewDidLoad()
         //
-        
+      
         self.view.bringSubview(toFront: self.topLogo)
         let keyboardToolbar = UIToolbar()
         keyboardToolbar.sizeToFit()
@@ -51,6 +57,9 @@ class ViewController: UIViewController, MKMapViewDelegate, UISearchBarDelegate, 
 
         searchBAr.inputAccessoryView = keyboardToolbar
 
+        self.inforView.isHidden = false
+        self.infoViewHeight.constant = 0
+        
         //searchBar
         searchBAr.delegate = self
         searchTableView.delegate = self
@@ -90,7 +99,7 @@ class ViewController: UIViewController, MKMapViewDelegate, UISearchBarDelegate, 
         self.mapKitView.delegate = self
         self.mapKitView.showsUserLocation = true
 //        self.mapKitView.layer.cornerRadius = 10.0
-        self.requestWashButton.layer.cornerRadius = 10.0
+//        self.requestWashButton.layer.cornerRadius = 10.0
         
         locationManager.requestWhenInUseAuthorization()
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
@@ -198,34 +207,56 @@ class ViewController: UIViewController, MKMapViewDelegate, UISearchBarDelegate, 
         self.searchButtonHit()
         searchBar.resignFirstResponder()
     }
+    //TABLE DELAGATES
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if(tableView == self.searchTableView){
         return self.matchingItems.count
+        }else if(tableView == self.infoTableView){
+            return self.featuresArray.count
+        }
+        return 0
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if(tableView == self.searchTableView){
         return 50.0
+        }
+        return 30.0
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         var cell = tableView.dequeueReusableCell(withIdentifier: "cell")
+        if(tableView == self.searchTableView){
         if cell == nil {
             cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
         }
         var address = ""
         address = self.matchingItems[indexPath.row].placemark.title!
         cell!.textLabel?.text = address
+        }
+        else if(tableView == self.infoTableView){
+            if cell == nil {
+                cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
+            }
+            var feature = ""
+            feature = self.featuresArray[indexPath.row] as! String
+            cell!.textLabel?.text = feature
+        }
         return cell!
+        
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let address = self.matchingItems[indexPath.row].placemark.title! as NSString
-        self.finalAddress = address
-        self.searchBAr.text = self.finalAddress as String
-        setMapCoordinatePin(address: address as String)
-        tableView.isHidden = true
+        if(tableView == self.searchTableView){
+            let address = self.matchingItems[indexPath.row].placemark.title! as NSString
+            self.finalAddress = address
+            self.searchBAr.text = self.finalAddress as String
+            setMapCoordinatePin(address: address as String)
+            tableView.isHidden = true
+        }
     }
     func displayListOfResults(listOfAddresses: [MKMapItem]) {
         if(listOfAddresses.count > 1) {
@@ -263,7 +294,20 @@ class ViewController: UIViewController, MKMapViewDelegate, UISearchBarDelegate, 
         }
     }
     
+
     
+    @IBAction func tableSwipedUp(_ sender: UISwipeGestureRecognizer) {
+        
+        self.infoTableView.delegate = self
+        self.infoTableView.dataSource = self
+        self.infoTableView.reloadData()
+        
+        UIView.animate(withDuration: 0.5, animations: {
+                self.infoViewHeight.constant = 140.0
+                self.view.layoutIfNeeded()
+            })
+        
+    }
     
     //Error handling
     
