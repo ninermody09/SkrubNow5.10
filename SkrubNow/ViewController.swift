@@ -143,6 +143,7 @@ class ViewController: UIViewController, MKMapViewDelegate, UISearchBarDelegate, 
                     self.finalAddress = NSString(format: "%@, %@ %@", address1, city, zipCode)
                     
                     requestVC.address = self.finalAddress as String
+                    requestVC.typeOfService = self.selectedViewName as String
                     requestVC.view.frame = CGRect(x:0, y:0, width: self.view.frame.size.width, height: self.view.frame.size.height)
                     self.addChildViewController(requestVC)
                     self.view.addSubview(requestVC.view)
@@ -348,8 +349,9 @@ class ViewController: UIViewController, MKMapViewDelegate, UISearchBarDelegate, 
             self.view.layoutIfNeeded()
         })
     }
-    
-    @IBAction func tableSwipedUp(_ sender: UISwipeGestureRecognizer) {
+    //full service click
+
+    @IBAction func tableSwipedUp(_ sender: Any) {
         self.interiorOnlyView.alpha = 0.95
         self.exteriorOnlyView.alpha = 0.95
         self.fullServiceView.alpha = 0.95

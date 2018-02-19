@@ -26,11 +26,8 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundGradient" translatesAutoresizingMaskIntoConstraints="NO" id="s7W-LS-Q5D">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
-                </imageView>
                 <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DIx-Mh-NEV">
-                    <rect key="frame" x="1" y="74" width="373" height="583"/>
+                    <rect key="frame" x="1" y="64" width="373" height="593"/>
                     <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </webView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9vD-Iq-n5d">
@@ -55,13 +52,10 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="fNI-YO-Fi3" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="5WD-vk-mWn"/>
-                <constraint firstItem="s7W-LS-Q5D" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="5Wd-0g-DaP"/>
                 <constraint firstAttribute="bottom" secondItem="DIx-Mh-NEV" secondAttribute="bottom" constant="10" id="Bjh-sI-YbB"/>
                 <constraint firstItem="9vD-Iq-n5d" firstAttribute="centerY" secondItem="fNI-YO-Fi3" secondAttribute="centerY" id="NqP-vL-do0"/>
-                <constraint firstItem="DIx-Mh-NEV" firstAttribute="top" secondItem="fNI-YO-Fi3" secondAttribute="bottom" constant="10" id="bTt-Le-dm7"/>
+                <constraint firstItem="DIx-Mh-NEV" firstAttribute="top" secondItem="fNI-YO-Fi3" secondAttribute="bottom" id="bTt-Le-dm7"/>
                 <constraint firstAttribute="trailing" secondItem="DIx-Mh-NEV" secondAttribute="trailing" constant="1" id="ckI-r5-Opo"/>
-                <constraint firstItem="s7W-LS-Q5D" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="d1R-oe-v47"/>
-                <constraint firstAttribute="trailing" secondItem="s7W-LS-Q5D" secondAttribute="trailing" id="d9O-TR-XId"/>
                 <constraint firstItem="fNI-YO-Fi3" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="eaT-hN-jks"/>
                 <constraint firstAttribute="trailing" secondItem="9vD-Iq-n5d" secondAttribute="trailing" constant="20" id="hq0-l1-Qwv"/>
                 <constraint firstItem="DIx-Mh-NEV" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="1" id="sX5-Pu-RIC"/>
@@ -70,7 +64,6 @@
         </view>
     </objects>
     <resources>
-        <image name="backgroundGradient" width="375" height="1000"/>
         <image name="logoWithWords" width="5481" height="1554"/>
     </resources>
 </document>

@@ -112,6 +112,7 @@
                                     <nil key="highlightedColor"/>
                                     <connections>
                                         <outletCollection property="gestureRecognizers" destination="LRW-Kn-gz0" appends="YES" id="SpA-6o-6nL"/>
+                                        <outletCollection property="gestureRecognizers" destination="zta-wv-6rs" appends="YES" id="Q2j-we-1h0"/>
                                     </connections>
                                 </label>
                             </subviews>
@@ -134,6 +135,7 @@
                                     <nil key="highlightedColor"/>
                                     <connections>
                                         <outletCollection property="gestureRecognizers" destination="HBO-7v-Deu" appends="YES" id="QWb-NW-ysx"/>
+                                        <outletCollection property="gestureRecognizers" destination="4MH-Ye-aTm" appends="YES" id="RkG-Sp-3kn"/>
                                     </connections>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gZE-XM-yaw">
@@ -166,6 +168,7 @@
                                     <nil key="highlightedColor"/>
                                     <connections>
                                         <outletCollection property="gestureRecognizers" destination="wlS-tY-fti" appends="YES" id="Uso-ZP-NTd"/>
+                                        <outletCollection property="gestureRecognizers" destination="mqA-i6-qgS" appends="YES" id="yo3-nM-Sc9"/>
                                     </connections>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="55A-Ua-ThF">
@@ -319,6 +322,21 @@
                 <action selector="interiorOnly:" destination="-1" id="gym-rm-JPQ"/>
             </connections>
         </swipeGestureRecognizer>
+        <tapGestureRecognizer id="zta-wv-6rs">
+            <connections>
+                <action selector="tableSwipedUp:" destination="-1" id="8lU-sn-YFo"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="mqA-i6-qgS">
+            <connections>
+                <action selector="interiorOnly:" destination="-1" id="jJz-B2-p3U"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="4MH-Ye-aTm">
+            <connections>
+                <action selector="exteriorOnlySwipeUp:" destination="-1" id="rmP-fc-cuz"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
     <resources>
         <image name="carPinImage" width="2338" height="3057"/>
