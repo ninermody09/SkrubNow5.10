@@ -63,7 +63,7 @@
                     </connections>
                 </button>
                 <searchBar contentMode="redraw" placeholder="Enter Address" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ch-J0-XHN">
-                    <rect key="frame" x="0.0" y="55" width="375" height="56"/>
+                    <rect key="frame" x="0.0" y="55" width="326" height="56"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="56" id="cjG-Oj-QUb"/>
@@ -272,13 +272,24 @@
                         <constraint firstAttribute="bottom" secondItem="iZQ-uH-RzP" secondAttribute="bottom" constant="10" id="wsB-3J-TVi"/>
                     </constraints>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btp-e6-Gm6">
+                    <rect key="frame" x="326" y="61" width="44" height="44"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="E75-9d-ibN"/>
+                        <constraint firstAttribute="width" constant="44" id="o59-Uk-U52"/>
+                    </constraints>
+                    <state key="normal" image="snapToLocation"/>
+                </button>
             </subviews>
             <color key="backgroundColor" red="0.98532626295336789" green="0.98532626295336789" blue="0.98532626295336789" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="btp-e6-Gm6" firstAttribute="leading" secondItem="2ch-J0-XHN" secondAttribute="trailing" id="1Gb-hE-Q3G"/>
                 <constraint firstItem="WIE-Im-jN2" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="5b7-Mi-Wkh"/>
                 <constraint firstAttribute="trailing" secondItem="eHK-Mm-X21" secondAttribute="trailing" id="6VJ-EL-Ont"/>
                 <constraint firstItem="WIE-Im-jN2" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="7zw-HW-lau"/>
                 <constraint firstAttribute="trailing" secondItem="Uub-HI-xB5" secondAttribute="trailing" constant="10" id="Bg5-AY-BRu"/>
+                <constraint firstAttribute="trailing" secondItem="btp-e6-Gm6" secondAttribute="trailing" constant="5" id="CLu-yD-6Vs"/>
                 <constraint firstItem="WIE-Im-jN2" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="FP4-KM-3Kl"/>
                 <constraint firstItem="FEX-fb-PPj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Ik9-SR-8qC"/>
                 <constraint firstItem="1XX-UQ-d9a" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="KfD-28-Xeq"/>
@@ -289,15 +300,14 @@
                 <constraint firstItem="r4g-F6-cTb" firstAttribute="top" secondItem="twA-cM-mpS" secondAttribute="bottom" id="PtY-qb-PNa"/>
                 <constraint firstItem="Uub-HI-xB5" firstAttribute="top" secondItem="2ch-J0-XHN" secondAttribute="bottom" id="U7F-0F-e8h"/>
                 <constraint firstItem="eHK-Mm-X21" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="UvE-Bc-Oik"/>
-                <constraint firstAttribute="trailing" secondItem="2ch-J0-XHN" secondAttribute="trailing" id="VLk-w3-lvG"/>
                 <constraint firstAttribute="trailing" secondItem="r4g-F6-cTb" secondAttribute="trailing" id="VOL-Qg-TzS"/>
+                <constraint firstItem="btp-e6-Gm6" firstAttribute="centerY" secondItem="2ch-J0-XHN" secondAttribute="centerY" id="Wew-Gs-zwH"/>
                 <constraint firstAttribute="trailing" secondItem="twA-cM-mpS" secondAttribute="trailing" id="YT9-Ty-eJF"/>
                 <constraint firstItem="WIE-Im-jN2" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ZRW-fU-4KM"/>
                 <constraint firstAttribute="bottom" secondItem="FEX-fb-PPj" secondAttribute="bottom" id="bO2-XQ-vRm"/>
                 <constraint firstItem="r4g-F6-cTb" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="cP4-0k-e3H"/>
                 <constraint firstItem="1XX-UQ-d9a" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="cbE-D0-Bcj"/>
                 <constraint firstItem="Uub-HI-xB5" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="hxX-wX-pg8"/>
-                <constraint firstItem="FEX-fb-PPj" firstAttribute="top" secondItem="r4g-F6-cTb" secondAttribute="bottom" id="ke1-eQ-Ov7"/>
                 <constraint firstItem="eHK-Mm-X21" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="mrN-Ih-0Ad"/>
                 <constraint firstItem="mdw-8K-h9D" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="nMq-Km-VQJ"/>
                 <constraint firstItem="FEX-fb-PPj" firstAttribute="top" secondItem="r4g-F6-cTb" secondAttribute="bottom" id="njn-YC-lIx"/>
@@ -341,5 +351,6 @@
     <resources>
         <image name="carPinImage" width="2338" height="3057"/>
         <image name="logoWithWords" width="5481" height="1554"/>
+        <image name="snapToLocation" width="37" height="37"/>
     </resources>
 </document>

@@ -8,9 +8,6 @@
 
 import UIKit
 import MapKit
-//import Firebase
-//import Stripe
-
 
 class ViewController: UIViewController, MKMapViewDelegate, UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource {
     
@@ -44,7 +41,7 @@ class ViewController: UIViewController, MKMapViewDelegate, UISearchBarDelegate, 
     @IBOutlet weak var requestWashButton: UIButton!
     var finalAddress:NSString = ""
     var featuresArray:[String] = []
-    
+    var zipCodeList:[String] = ["28273","28217","28278","28210","28209","28203"]
     @IBOutlet weak var infoLabel1: UILabel!
     @IBOutlet weak var inforView: UIView!
     
@@ -71,7 +68,7 @@ class ViewController: UIViewController, MKMapViewDelegate, UISearchBarDelegate, 
         
         searchBAr.inputAccessoryView = keyboardToolbar
         
-//        self.inforView.isHidden = false
+        //        self.inforView.isHidden = false
         self.infoViewHeight.constant = 0
         
         //searchBar
@@ -141,12 +138,18 @@ class ViewController: UIViewController, MKMapViewDelegate, UISearchBarDelegate, 
                     let zipCode = placeMark.postalCode! as NSString
                     let city = placeMark.locality! as NSString
                     self.finalAddress = NSString(format: "%@, %@ %@", address1, city, zipCode)
-                    
-                    requestVC.address = self.finalAddress as String
-                    requestVC.typeOfService = self.selectedViewName as String
-                    requestVC.view.frame = CGRect(x:0, y:0, width: self.view.frame.size.width, height: self.view.frame.size.height)
-                    self.addChildViewController(requestVC)
-                    self.view.addSubview(requestVC.view)
+                    if(self.checkIfServiceArea(zipcode: zipCode as String)){
+                        requestVC.address = self.finalAddress as String
+                        requestVC.typeOfService = self.selectedViewName as String
+                        requestVC.view.frame = CGRect(x:0, y:0, width: self.view.frame.size.width, height: self.view.frame.size.height)
+                        self.addChildViewController(requestVC)
+                        self.view.addSubview(requestVC.view)
+                    }else {
+                        let alert = UIAlertController(title: "Ahh Bummer", message: "Unfortantely we don't service your area yet", preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
+                        
+                        self.present(alert, animated: true)
+                    }
                 }
             })
         }else {
@@ -156,7 +159,15 @@ class ViewController: UIViewController, MKMapViewDelegate, UISearchBarDelegate, 
             self.addChildViewController(requestVC)
             self.view.addSubview(requestVC.view)
         }
-        
+    }
+    
+    func checkIfServiceArea(zipcode: String) -> Bool{
+        for zip in zipCodeList {
+            if zip == zipcode {
+                return true
+            }
+        }
+        return false
     }
     
     func searchButtonHit() {
@@ -312,7 +323,7 @@ class ViewController: UIViewController, MKMapViewDelegate, UISearchBarDelegate, 
     }
     
     @IBAction func exteriorOnlySwipeUp(_ sender: Any) {
-       
+        
         self.featuresArray = [] //reset array
         self.featuresArray = ["Hand wash + Drying aid", "Microfiber cloth dry", "Wax application", "Wheels and tires", "Tire polish", "Exterior Windows"]
         self.infoLabel1.text = "Exterior Only"
@@ -323,12 +334,12 @@ class ViewController: UIViewController, MKMapViewDelegate, UISearchBarDelegate, 
         self.selectedViewName = "Ext"
         
         UIView.animate(withDuration: 0.5, animations: {
-             self.inforView.isHidden = false
+            self.inforView.isHidden = false
             self.infoViewHeight.constant = 140.0
             self.view.layoutIfNeeded()
         })
     }
-
+    
     @IBAction func interiorOnly(_ sender: Any) {
         self.interiorOnlyView.alpha = 0.95
         self.exteriorOnlyView.alpha = 0.95
@@ -350,13 +361,13 @@ class ViewController: UIViewController, MKMapViewDelegate, UISearchBarDelegate, 
         })
     }
     //full service click
-
+    
     @IBAction func tableSwipedUp(_ sender: Any) {
         self.interiorOnlyView.alpha = 0.95
         self.exteriorOnlyView.alpha = 0.95
         self.fullServiceView.alpha = 0.95
         
-       
+        
         self.featuresArray = []
         self.featuresArray = ["Vaccum Interior", "Dash Console, and Seat wipe", "Windows cleaned","Hand wash + Drying aid", "Microfiber cloth dry", "Wax application", "Wheels and tires", "Tire polish", "Exterior Windows"]
         self.infoLabel1.text = "Full Service"
@@ -366,7 +377,7 @@ class ViewController: UIViewController, MKMapViewDelegate, UISearchBarDelegate, 
         self.infoTableView.reloadData()
         self.selectedViewName = "Full"
         UIView.animate(withDuration: 0.5, animations: {
-             self.inforView.isHidden = false
+            self.inforView.isHidden = false
             self.infoViewHeight.constant = 140.0
             self.view.layoutIfNeeded()
         })
@@ -405,15 +416,14 @@ class ViewController: UIViewController, MKMapViewDelegate, UISearchBarDelegate, 
             self.exteriorOnlyView.alpha = 0.95
             self.fullServiceView.alpha = 0.95
         }
-
+        
         UIView.animate(withDuration: 0.5, animations: {
             self.infoViewHeight.constant = 0
             self.view.layoutIfNeeded()
             self.inforView.isHidden = true
         }, completion: { (value: Bool) in
-                self.inforView.isHidden = true})
+            self.inforView.isHidden = true})
     }
-    
     
     //Error handling
     
