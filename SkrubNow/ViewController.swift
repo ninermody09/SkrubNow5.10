@@ -11,50 +11,43 @@ import MapKit
 
 class ViewController: UIViewController, MKMapViewDelegate, UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource {
     
-    
+
+    @IBOutlet weak var snapToLocationButton: UIButton!
     @IBOutlet weak var stackViewOptions: UIStackView!
     @IBOutlet var interiorOnlySwipe: UISwipeGestureRecognizer!
     @IBOutlet var exteriorOnlySwipe: UISwipeGestureRecognizer!
     @IBOutlet var fullServiceSwipe: UISwipeGestureRecognizer!
-    
     @IBOutlet weak var fullServiceView: UIView!
     @IBOutlet weak var exteriorOnlyView: UIView!
     @IBOutlet weak var interiorOnlyView: UIView!
-    
-    var selectedViewName:String = ""
-    
     @IBOutlet weak var heightOfTable: NSLayoutConstraint!
-    
+    @IBOutlet weak var infoLabel1: UILabel!
+    @IBOutlet weak var inforView: UIView!
+    @IBOutlet weak var infoViewHeight: NSLayoutConstraint!
+    @IBOutlet weak var searchTableView: UITableView!
+    @IBOutlet weak var infoLabelPrice: UILabel!
     @IBOutlet weak var infoTableView: UITableView!
     @IBOutlet weak var topLogo: UIImageView!
     @IBOutlet weak var searchBAr: UISearchBar!
+    @IBOutlet weak var mapKitView: MKMapView!
+    @IBOutlet weak var requestWashButton: UIButton!
+    
+    var selectedViewName:String = ""
     let kBaseURL = "http://lowcost-env.rrpikpmqwu.us-east-1.elasticbeanstalk.com/charge";
     let locationManager = CLLocationManager()
     var hasFoundLocation = false
     var mapIsLoaded = false
     var valueForMap = NSMutableArray()
     var numberOfResults = Int()
-    //let firebaseSecureData = FirebaseData.init()
     var successfulTransactionApproved = false
     var matchingItems:[MKMapItem] = []
-    @IBOutlet weak var mapKitView: MKMapView!
-    @IBOutlet weak var requestWashButton: UIButton!
     var finalAddress:NSString = ""
     var featuresArray:[String] = []
     var zipCodeList:[String] = ["28273","28217","28278","28210","28209","28203"]
-    @IBOutlet weak var infoLabel1: UILabel!
-    @IBOutlet weak var inforView: UIView!
-    
-    @IBOutlet weak var infoViewHeight: NSLayoutConstraint!
-    
-    
-    @IBOutlet weak var searchTableView: UITableView!
-    
-    @IBOutlet weak var infoLabelPrice: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        //
-        
+
         self.view.bringSubview(toFront: self.topLogo)
         let keyboardToolbar = UIToolbar()
         keyboardToolbar.sizeToFit()
@@ -74,10 +67,11 @@ class ViewController: UIViewController, MKMapViewDelegate, UISearchBarDelegate, 
         //searchBar
         searchBAr.delegate = self
         searchTableView.delegate = self
-        searchTableView.dataSource = self as? UITableViewDataSource
+        searchTableView.dataSource = self as UITableViewDataSource
         //        searchTableView.layer.cornerRadius = 10.0
         searchTableView.isHidden = true
         searchBAr.backgroundImage = UIImage()
+        self.snapToLocationButton.layer.cornerRadius = 10
         
         let rectShape = CAShapeLayer()
         rectShape.bounds = self.searchBAr.frame
@@ -212,7 +206,6 @@ class ViewController: UIViewController, MKMapViewDelegate, UISearchBarDelegate, 
             let point = MKPointAnnotation()
             point.coordinate = userLocation.coordinate
             hasFoundLocation = true
-            
         }
     }
     
@@ -335,7 +328,7 @@ class ViewController: UIViewController, MKMapViewDelegate, UISearchBarDelegate, 
         
         UIView.animate(withDuration: 0.5, animations: {
             self.inforView.isHidden = false
-            self.infoViewHeight.constant = 140.0
+            self.infoViewHeight.constant = 200.0
             self.view.layoutIfNeeded()
         })
     }
@@ -356,7 +349,7 @@ class ViewController: UIViewController, MKMapViewDelegate, UISearchBarDelegate, 
         self.selectedViewName = "Int"
         UIView.animate(withDuration: 0.5, animations: {
             self.inforView.isHidden = false
-            self.infoViewHeight.constant = 140.0
+            self.infoViewHeight.constant = 200.0
             self.view.layoutIfNeeded()
         })
     }
@@ -378,7 +371,7 @@ class ViewController: UIViewController, MKMapViewDelegate, UISearchBarDelegate, 
         self.selectedViewName = "Full"
         UIView.animate(withDuration: 0.5, animations: {
             self.inforView.isHidden = false
-            self.infoViewHeight.constant = 140.0
+            self.infoViewHeight.constant = 200.0
             self.view.layoutIfNeeded()
         })
     }
@@ -423,6 +416,10 @@ class ViewController: UIViewController, MKMapViewDelegate, UISearchBarDelegate, 
             self.inforView.isHidden = true
         }, completion: { (value: Bool) in
             self.inforView.isHidden = true})
+    }
+    
+    @IBAction func snapToLocation(_ sender: Any) {
+        
     }
     
     //Error handling
