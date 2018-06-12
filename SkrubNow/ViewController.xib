@@ -17,6 +17,7 @@
                 <outlet property="fullServiceSwipe" destination="LRW-Kn-gz0" id="gn2-OH-Lsn"/>
                 <outlet property="fullServiceView" destination="Eyx-KY-0jk" id="48A-tY-bQz"/>
                 <outlet property="heightOfTable" destination="txp-i9-26A" id="yrK-tb-5G1"/>
+                <outlet property="heightOfTopBar" destination="KCw-W5-Fyf" id="6ve-hn-wEW"/>
                 <outlet property="infoLabel1" destination="fQC-xe-XQL" id="3or-kl-dU5"/>
                 <outlet property="infoLabelPrice" destination="iZQ-uH-RzP" id="AOP-jL-Ane"/>
                 <outlet property="infoTableView" destination="fCc-AX-9sh" id="3VQ-Oi-Lkr"/>
@@ -25,12 +26,14 @@
                 <outlet property="interiorOnlySwipe" destination="wlS-tY-fti" id="u8v-Bb-la4"/>
                 <outlet property="interiorOnlyView" destination="g73-bh-gOt" id="VO0-Nr-5mg"/>
                 <outlet property="mapKitView" destination="WIE-Im-jN2" id="fjg-nn-5sd"/>
+                <outlet property="requestButtonHeightConstant" destination="OKR-kU-kou" id="GdM-50-3mS"/>
                 <outlet property="requestWashButton" destination="FEX-fb-PPj" id="Q8j-jI-9ZM"/>
                 <outlet property="searchBAr" destination="2ch-J0-XHN" id="YyN-UG-w7P"/>
                 <outlet property="searchTableView" destination="Uub-HI-xB5" id="EeL-KQ-428"/>
                 <outlet property="snapToLocationButton" destination="btp-e6-Gm6" id="e4w-hM-T5I"/>
                 <outlet property="stackViewOptions" destination="r4g-F6-cTb" id="yWs-HE-hzr"/>
                 <outlet property="topLogo" destination="mdw-8K-h9D" id="HfJ-46-XAh"/>
+                <outlet property="topLogoSpaceing" destination="nMq-Km-VQJ" id="ytp-VQ-n8R"/>
                 <outlet property="view" destination="iN0-l3-epB" id="Z2c-Ej-7fX"/>
             </connections>
         </placeholder>
@@ -64,7 +67,7 @@
                     </connections>
                 </button>
                 <searchBar contentMode="redraw" placeholder="Enter Address" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ch-J0-XHN">
-                    <rect key="frame" x="0.0" y="55" width="326" height="56"/>
+                    <rect key="frame" x="0.0" y="55" width="330" height="56"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="56" id="cjG-Oj-QUb"/>
@@ -219,7 +222,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="247" verticalCompressionResistancePriority="747" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jdx-9Y-sWD">
-                            <rect key="frame" x="20" y="5" width="158" height="30"/>
+                            <rect key="frame" x="20" y="5" width="157.66666666666666" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="djJ-DV-48D"/>
                             </constraints>
@@ -232,7 +235,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="247" verticalCompressionResistancePriority="746" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X0B-PL-cvk">
-                            <rect key="frame" x="198" y="5" width="157" height="30"/>
+                            <rect key="frame" x="197.66666666666663" y="5" width="157.33333333333337" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="Nvp-wz-jQJ"/>
                             </constraints>
@@ -274,11 +277,15 @@
                     </constraints>
                 </view>
                 <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btp-e6-Gm6">
-                    <rect key="frame" x="326" y="61" width="44" height="44"/>
+                    <rect key="frame" x="330" y="63" width="40" height="40"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="44" id="E75-9d-ibN"/>
-                        <constraint firstAttribute="width" constant="44" id="o59-Uk-U52"/>
+                        <constraint firstAttribute="height" constant="44" id="E75-9d-ibN">
+                            <variation key="heightClass=regular-widthClass=compact" constant="40"/>
+                        </constraint>
+                        <constraint firstAttribute="width" constant="44" id="o59-Uk-U52">
+                            <variation key="heightClass=regular-widthClass=compact" constant="40"/>
+                        </constraint>
                     </constraints>
                     <state key="normal" image="snapToLocation"/>
                     <connections>

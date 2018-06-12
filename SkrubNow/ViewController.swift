@@ -32,6 +32,9 @@ class ViewController: UIViewController, MKMapViewDelegate, UISearchBarDelegate, 
     @IBOutlet weak var mapKitView: MKMapView!
     @IBOutlet weak var requestWashButton: UIButton!
     
+    @IBOutlet weak var requestButtonHeightConstant: NSLayoutConstraint!
+    @IBOutlet weak var topLogoSpaceing: NSLayoutConstraint!
+    @IBOutlet weak var heightOfTopBar: NSLayoutConstraint!
     var selectedViewName:String = ""
     let kBaseURL = "http://lowcost-env.rrpikpmqwu.us-east-1.elasticbeanstalk.com/charge";
     let locationManager = CLLocationManager()
@@ -44,6 +47,8 @@ class ViewController: UIViewController, MKMapViewDelegate, UISearchBarDelegate, 
     var finalAddress:NSString = ""
     var featuresArray:[String] = []
     var zipCodeList:[String] = ["28273","28217","28278","28210","28209","28203"]
+    var userLocationSnap = MKUserLocation()
+    var infoHeightConstant = 150.0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -112,6 +117,20 @@ class ViewController: UIViewController, MKMapViewDelegate, UISearchBarDelegate, 
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        setTopBar()
+    }
+    func setTopBar() {
+        if UIDevice().userInterfaceIdiom == .phone {
+            switch UIScreen.main.nativeBounds.height {
+            case 2436:
+                self.heightOfTopBar.constant = 70
+                self.requestButtonHeightConstant.constant = 60
+                self.topLogoSpaceing.constant = 35
+            
+            default:
+                print("unknown")
+            }
+        }
     }
     func cancelButtonPressed() {
         self.resignFirstResponder()
@@ -201,6 +220,7 @@ class ViewController: UIViewController, MKMapViewDelegate, UISearchBarDelegate, 
     func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
         if(!self.hasFoundLocation){
             let region = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, 250, 250)
+            userLocationSnap = userLocation
             self.mapKitView.setRegion(self.mapKitView.regionThatFits(region), animated: true)
             self.mapKitView.mapType = .satellite
             let point = MKPointAnnotation()
@@ -328,7 +348,7 @@ class ViewController: UIViewController, MKMapViewDelegate, UISearchBarDelegate, 
         
         UIView.animate(withDuration: 0.5, animations: {
             self.inforView.isHidden = false
-            self.infoViewHeight.constant = 200.0
+            self.infoViewHeight.constant = CGFloat(self.infoHeightConstant)
             self.view.layoutIfNeeded()
         })
     }
@@ -349,7 +369,7 @@ class ViewController: UIViewController, MKMapViewDelegate, UISearchBarDelegate, 
         self.selectedViewName = "Int"
         UIView.animate(withDuration: 0.5, animations: {
             self.inforView.isHidden = false
-            self.infoViewHeight.constant = 200.0
+            self.infoViewHeight.constant = CGFloat(self.infoHeightConstant)
             self.view.layoutIfNeeded()
         })
     }
@@ -371,7 +391,7 @@ class ViewController: UIViewController, MKMapViewDelegate, UISearchBarDelegate, 
         self.selectedViewName = "Full"
         UIView.animate(withDuration: 0.5, animations: {
             self.inforView.isHidden = false
-            self.infoViewHeight.constant = 200.0
+            self.infoViewHeight.constant = CGFloat(self.infoHeightConstant)
             self.view.layoutIfNeeded()
         })
     }
@@ -419,7 +439,8 @@ class ViewController: UIViewController, MKMapViewDelegate, UISearchBarDelegate, 
     }
     
     @IBAction func snapToLocation(_ sender: Any) {
-        
+        let viewRegion = MKCoordinateRegionMakeWithDistance(userLocationSnap.coordinate, 250, 250)
+        mapKitView.setRegion(viewRegion, animated: false)
     }
     
     //Error handling
