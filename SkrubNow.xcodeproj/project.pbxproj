@@ -7,17 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3A1213791E62709D00FED42F /* CarInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A12136C1E62709D00FED42F /* CarInformationViewController.swift */; };
-		3A12137A1E62709D00FED42F /* CarInformationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A12136D1E62709D00FED42F /* CarInformationViewController.xib */; };
-		3A12137B1E62709D00FED42F /* CreditCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A12136E1E62709D00FED42F /* CreditCardViewController.swift */; };
-		3A12137C1E62709D00FED42F /* CreditCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A12136F1E62709D00FED42F /* CreditCardViewController.xib */; };
-		3A12137D1E62709D00FED42F /* FirebaseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1213701E62709D00FED42F /* FirebaseData.swift */; };
 		3A12137E1E62709D00FED42F /* RequestedWashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1213711E62709D00FED42F /* RequestedWashViewController.swift */; };
 		3A12137F1E62709D00FED42F /* RequestedWashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A1213721E62709D00FED42F /* RequestedWashViewController.xib */; };
 		3A1213801E62709D00FED42F /* ScheduleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1213731E62709D00FED42F /* ScheduleData.swift */; };
-		3A1213811E62709D00FED42F /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1213741E62709D00FED42F /* ScheduleViewController.swift */; };
-		3A1213821E62709D00FED42F /* ScheduleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A1213751E62709D00FED42F /* ScheduleViewController.xib */; };
-		3A1213831E62709D00FED42F /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1213761E62709D00FED42F /* UserInfo.swift */; };
 		3A1213841E62709D00FED42F /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A1213771E62709D00FED42F /* ViewController.xib */; };
 		3A1213861E6275F600FED42F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3A1213851E6275F600FED42F /* GoogleService-Info.plist */; };
 		3AB0DCE91E626CFF009E21D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB0DCE81E626CFF009E21D1 /* AppDelegate.swift */; };
@@ -27,11 +19,8 @@
 		3AB0DCF31E626D00009E21D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AB0DCF11E626D00009E21D1 /* LaunchScreen.storyboard */; };
 		3AB0DCFE1E626D00009E21D1 /* SkrubNowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB0DCFD1E626D00009E21D1 /* SkrubNowTests.swift */; };
 		3AB0DD091E626D00009E21D1 /* SkrubNowUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB0DD081E626D00009E21D1 /* SkrubNowUITests.swift */; };
-		645350CA4CD1E2E06B3BDCF8 /* Pods_SkrubNowUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3BE138C350C618B5B5E9B66 /* Pods_SkrubNowUITests.framework */; };
-		6BE61402CD349E2F5440BABE /* Pods_SkrubNow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B3B1C10D976FDA35E325C42 /* Pods_SkrubNow.framework */; };
 		A1E56A8D2016C003000506B9 /* acuityWebPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E56A8B2016C003000506B9 /* acuityWebPageViewController.swift */; };
 		A1E56A8E2016C003000506B9 /* acuityWebPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1E56A8C2016C003000506B9 /* acuityWebPageViewController.xib */; };
-		F0CB788FD50D029BDA22C238 /* Pods_SkrubNowTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 416D2221AE00596DFE0A5BF0 /* Pods_SkrubNowTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,17 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3A12136C1E62709D00FED42F /* CarInformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarInformationViewController.swift; sourceTree = "<group>"; };
-		3A12136D1E62709D00FED42F /* CarInformationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CarInformationViewController.xib; sourceTree = "<group>"; };
-		3A12136E1E62709D00FED42F /* CreditCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardViewController.swift; sourceTree = "<group>"; };
-		3A12136F1E62709D00FED42F /* CreditCardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreditCardViewController.xib; sourceTree = "<group>"; };
-		3A1213701E62709D00FED42F /* FirebaseData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseData.swift; sourceTree = "<group>"; };
 		3A1213711E62709D00FED42F /* RequestedWashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestedWashViewController.swift; sourceTree = "<group>"; };
 		3A1213721E62709D00FED42F /* RequestedWashViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RequestedWashViewController.xib; sourceTree = "<group>"; };
 		3A1213731E62709D00FED42F /* ScheduleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleData.swift; sourceTree = "<group>"; };
-		3A1213741E62709D00FED42F /* ScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
-		3A1213751E62709D00FED42F /* ScheduleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScheduleViewController.xib; sourceTree = "<group>"; };
-		3A1213761E62709D00FED42F /* UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		3A1213771E62709D00FED42F /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		3A1213851E6275F600FED42F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3AB0DCE51E626CFF009E21D1 /* SkrubNow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkrubNow.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,17 +59,8 @@
 		3AB0DD041E626D00009E21D1 /* SkrubNowUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SkrubNowUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AB0DD081E626D00009E21D1 /* SkrubNowUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkrubNowUITests.swift; sourceTree = "<group>"; };
 		3AB0DD0A1E626D00009E21D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		416D2221AE00596DFE0A5BF0 /* Pods_SkrubNowTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SkrubNowTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4D35F9C08FC7569DB8DC35A1 /* Pods-SkrubNow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkrubNow.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SkrubNow/Pods-SkrubNow.debug.xcconfig"; sourceTree = "<group>"; };
-		7B3B1C10D976FDA35E325C42 /* Pods_SkrubNow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SkrubNow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1E56A8B2016C003000506B9 /* acuityWebPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = acuityWebPageViewController.swift; sourceTree = "<group>"; };
 		A1E56A8C2016C003000506B9 /* acuityWebPageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = acuityWebPageViewController.xib; sourceTree = "<group>"; };
-		CFFE275A29299798CDDF7408 /* Pods-SkrubNowUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkrubNowUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SkrubNowUITests/Pods-SkrubNowUITests.release.xcconfig"; sourceTree = "<group>"; };
-		E360227A2C57D8B2CF152077 /* Pods-SkrubNowTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkrubNowTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SkrubNowTests/Pods-SkrubNowTests.debug.xcconfig"; sourceTree = "<group>"; };
-		E3BE138C350C618B5B5E9B66 /* Pods_SkrubNowUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SkrubNowUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EACFA95D47CBF8979AF29144 /* Pods-SkrubNowUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkrubNowUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SkrubNowUITests/Pods-SkrubNowUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		EE6FE141300A3EC1C1696FE2 /* Pods-SkrubNowTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkrubNowTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SkrubNowTests/Pods-SkrubNowTests.release.xcconfig"; sourceTree = "<group>"; };
-		FDA6BCBA5083BD07C9574D2D /* Pods-SkrubNow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkrubNow.release.xcconfig"; path = "Pods/Target Support Files/Pods-SkrubNow/Pods-SkrubNow.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +68,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6BE61402CD349E2F5440BABE /* Pods_SkrubNow.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,7 +75,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F0CB788FD50D029BDA22C238 /* Pods_SkrubNowTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,7 +82,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				645350CA4CD1E2E06B3BDCF8 /* Pods_SkrubNowUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,7 +95,6 @@
 				3AB0DCFC1E626D00009E21D1 /* SkrubNowTests */,
 				3AB0DD071E626D00009E21D1 /* SkrubNowUITests */,
 				3AB0DCE61E626CFF009E21D1 /* Products */,
-				C09CD04F551800E7DB756BB4 /* Pods */,
 				86E202F3B10874BBDB879AE4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -145,17 +113,9 @@
 			isa = PBXGroup;
 			children = (
 				3A1213851E6275F600FED42F /* GoogleService-Info.plist */,
-				3A12136C1E62709D00FED42F /* CarInformationViewController.swift */,
-				3A12136D1E62709D00FED42F /* CarInformationViewController.xib */,
-				3A12136E1E62709D00FED42F /* CreditCardViewController.swift */,
-				3A12136F1E62709D00FED42F /* CreditCardViewController.xib */,
-				3A1213701E62709D00FED42F /* FirebaseData.swift */,
 				3A1213711E62709D00FED42F /* RequestedWashViewController.swift */,
 				3A1213721E62709D00FED42F /* RequestedWashViewController.xib */,
 				3A1213731E62709D00FED42F /* ScheduleData.swift */,
-				3A1213741E62709D00FED42F /* ScheduleViewController.swift */,
-				3A1213751E62709D00FED42F /* ScheduleViewController.xib */,
-				3A1213761E62709D00FED42F /* UserInfo.swift */,
 				3A1213771E62709D00FED42F /* ViewController.xib */,
 				3AB0DCE81E626CFF009E21D1 /* AppDelegate.swift */,
 				3AB0DCEA1E626CFF009E21D1 /* ViewController.swift */,
@@ -190,24 +150,8 @@
 		86E202F3B10874BBDB879AE4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7B3B1C10D976FDA35E325C42 /* Pods_SkrubNow.framework */,
-				416D2221AE00596DFE0A5BF0 /* Pods_SkrubNowTests.framework */,
-				E3BE138C350C618B5B5E9B66 /* Pods_SkrubNowUITests.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		C09CD04F551800E7DB756BB4 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				4D35F9C08FC7569DB8DC35A1 /* Pods-SkrubNow.debug.xcconfig */,
-				FDA6BCBA5083BD07C9574D2D /* Pods-SkrubNow.release.xcconfig */,
-				E360227A2C57D8B2CF152077 /* Pods-SkrubNowTests.debug.xcconfig */,
-				EE6FE141300A3EC1C1696FE2 /* Pods-SkrubNowTests.release.xcconfig */,
-				EACFA95D47CBF8979AF29144 /* Pods-SkrubNowUITests.debug.xcconfig */,
-				CFFE275A29299798CDDF7408 /* Pods-SkrubNowUITests.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,12 +161,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3AB0DD0D1E626D00009E21D1 /* Build configuration list for PBXNativeTarget "SkrubNow" */;
 			buildPhases = (
-				15AB4D3909AD73E0BB64E30E /* [CP] Check Pods Manifest.lock */,
 				3AB0DCE11E626CFF009E21D1 /* Sources */,
 				3AB0DCE21E626CFF009E21D1 /* Frameworks */,
 				3AB0DCE31E626CFF009E21D1 /* Resources */,
-				BAB6C9EB40B0EADDE73D4FDD /* [CP] Embed Pods Frameworks */,
-				9A41B87486C62F97F06857CB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -329,16 +270,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A12137A1E62709D00FED42F /* CarInformationViewController.xib in Resources */,
 				3AB0DCF31E626D00009E21D1 /* LaunchScreen.storyboard in Resources */,
 				3A1213861E6275F600FED42F /* GoogleService-Info.plist in Resources */,
 				3A1213841E62709D00FED42F /* ViewController.xib in Resources */,
 				3A12137F1E62709D00FED42F /* RequestedWashViewController.xib in Resources */,
-				3A1213821E62709D00FED42F /* ScheduleViewController.xib in Resources */,
 				3AB0DCF01E626D00009E21D1 /* Assets.xcassets in Resources */,
 				A1E56A8E2016C003000506B9 /* acuityWebPageViewController.xib in Resources */,
 				3AB0DCEE1E626CFF009E21D1 /* Main.storyboard in Resources */,
-				3A12137C1E62709D00FED42F /* CreditCardViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,21 +310,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SkrubNowUITests/Pods-SkrubNowUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		15AB4D3909AD73E0BB64E30E /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		35EEEBA68CB69BE3E24DD663 /* [CP] Embed Pods Frameworks */ = {
@@ -434,21 +357,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SkrubNowTests/Pods-SkrubNowTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9A41B87486C62F97F06857CB /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SkrubNow/Pods-SkrubNow-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		B098B03A8DD8F006F2F3F9A4 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -462,21 +370,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SkrubNowTests/Pods-SkrubNowTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BAB6C9EB40B0EADDE73D4FDD /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SkrubNow/Pods-SkrubNow-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C943A4547755491F3F911CCC /* [CP] Check Pods Manifest.lock */ = {
@@ -502,15 +395,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A12137E1E62709D00FED42F /* RequestedWashViewController.swift in Sources */,
-				3A12137D1E62709D00FED42F /* FirebaseData.swift in Sources */,
-				3A1213791E62709D00FED42F /* CarInformationViewController.swift in Sources */,
 				A1E56A8D2016C003000506B9 /* acuityWebPageViewController.swift in Sources */,
-				3A1213811E62709D00FED42F /* ScheduleViewController.swift in Sources */,
 				3AB0DCEB1E626CFF009E21D1 /* ViewController.swift in Sources */,
 				3A1213801E62709D00FED42F /* ScheduleData.swift in Sources */,
 				3AB0DCE91E626CFF009E21D1 /* AppDelegate.swift in Sources */,
-				3A1213831E62709D00FED42F /* UserInfo.swift in Sources */,
-				3A12137B1E62709D00FED42F /* CreditCardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -660,35 +548,40 @@
 		};
 		3AB0DD0E1E626D00009E21D1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4D35F9C08FC7569DB8DC35A1 /* Pods-SkrubNow.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GKC9DWS5N4;
 				INFOPLIST_FILE = SkrubNow/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Skrub.SkrubNow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		3AB0DD0F1E626D00009E21D1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FDA6BCBA5083BD07C9574D2D /* Pods-SkrubNow.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GKC9DWS5N4;
 				INFOPLIST_FILE = SkrubNow/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Skrub.SkrubNow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		3AB0DD111E626D00009E21D1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E360227A2C57D8B2CF152077 /* Pods-SkrubNowTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -704,7 +597,6 @@
 		};
 		3AB0DD121E626D00009E21D1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EE6FE141300A3EC1C1696FE2 /* Pods-SkrubNowTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -720,7 +612,6 @@
 		};
 		3AB0DD141E626D00009E21D1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EACFA95D47CBF8979AF29144 /* Pods-SkrubNowUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 556357W9A6;
@@ -735,7 +626,6 @@
 		};
 		3AB0DD151E626D00009E21D1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CFFE275A29299798CDDF7408 /* Pods-SkrubNowUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 556357W9A6;

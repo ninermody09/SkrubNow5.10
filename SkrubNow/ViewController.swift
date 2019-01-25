@@ -46,7 +46,7 @@ class ViewController: UIViewController, MKMapViewDelegate, UISearchBarDelegate, 
     var matchingItems:[MKMapItem] = []
     var finalAddress:NSString = ""
     var featuresArray:[String] = []
-    var zipCodeList:[String] = ["28273","28217","28278","28210","28209","28203"]
+    var zipCodeList:[String] = ["28273","28217","28278","28210","28209","28203","28134"]
     var userLocationSnap = MKUserLocation()
     var infoHeightConstant = 150.0
 
@@ -162,6 +162,7 @@ class ViewController: UIViewController, MKMapViewDelegate, UISearchBarDelegate, 
                         alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
                         
                         self.present(alert, animated: true)
+                        self.finalAddress = ""
                     }
                 }
             })
